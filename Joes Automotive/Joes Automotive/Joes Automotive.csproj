@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D8C27348-35D9-4FCD-8484-DE1DD7C2E65B}</ProjectGuid>
+    <ProjectGuid>{D72934B5-BAD9-416A-9860-EB5E6D9D7947}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Joe_s_Automotive</RootNamespace>
-    <AssemblyName>Joe%27s Automotive</AssemblyName>
+    <RootNamespace>Joes_Automotive</RootNamespace>
+    <AssemblyName>Joes Automotive</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>

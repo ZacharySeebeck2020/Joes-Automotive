@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Joe_s_Automotive.Properties
+namespace Joes_Automotive.Properties
 {
 
 

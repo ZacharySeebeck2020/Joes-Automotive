@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Joe_s_Automotive
+namespace Joes_Automotive
 {
-    public partial class Home : Form
+    public partial class Customers : Form
     {
-        public Home()
+        public Customers()
         {
             InitializeComponent();
         }
