@@ -24,7 +24,10 @@ namespace Joes_Automotive
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This screen has not been implemented yet.");
+            Form customers = new Customers();
+            this.Hide();
+            customers.ShowDialog();
+            this.Show();
         }
 
         private void btnVehicles_Click(object sender, EventArgs e)
