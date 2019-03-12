@@ -34,9 +34,14 @@ namespace Joes_Automotive
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            customersDataGridView.CurrentCell.RowIndex;
+            string f = customersDataGridView.CurrentRow.Cells[0].Value.ToString();
 
-            MessageBox.Show("The person selected has an ID of: " + 0);
+            MessageBox.Show("The person selected has an ID of: " + f);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
