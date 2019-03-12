@@ -201,6 +201,7 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDelete.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(947, 635);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(305, 34);
@@ -212,6 +213,7 @@
             // btnEdit
             // 
             this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnEdit.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Location = new System.Drawing.Point(12, 635);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(305, 34);
@@ -223,6 +225,7 @@
             // btnInvoices
             // 
             this.btnInvoices.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnInvoices.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInvoices.Location = new System.Drawing.Point(323, 635);
             this.btnInvoices.Name = "btnInvoices";
             this.btnInvoices.Size = new System.Drawing.Size(305, 34);
@@ -233,6 +236,7 @@
             // btnVehicles
             // 
             this.btnVehicles.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnVehicles.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVehicles.Location = new System.Drawing.Point(636, 635);
             this.btnVehicles.Name = "btnVehicles";
             this.btnVehicles.Size = new System.Drawing.Size(305, 34);
@@ -290,7 +294,7 @@
             this.Controls.Add(this.customersDataGridView);
             this.Controls.Add(this.customersBindingNavigator);
             this.Name = "Customers";
-            this.Text = " ";
+            this.Text = " All Customers";
             this.Load += new System.EventHandler(this.Customers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.joesBigBoyDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();

@@ -34,9 +34,19 @@ namespace Joes_Automotive
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            string f = customersDataGridView.CurrentRow.Cells[0].Value.ToString();
+            try
+            {
+                int customerID = int.Parse(customersDataGridView.CurrentRow.Cells[0].Value.ToString());
 
-            MessageBox.Show("The person selected has an ID of: " + f);
+                Customer customerForm = new Customer(customerID);
+                customerForm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was a problem editing the customer. Please try again later.\n \n \n \n \n \n " +
+                    "Error message: \n" +
+                    ex.Message);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
