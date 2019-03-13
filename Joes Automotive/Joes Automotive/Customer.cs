@@ -21,37 +21,26 @@ namespace Joes_Automotive
             this.customerID = customerID;
             InitializeComponent();
             MessageBox.Show("Viewing Customer ID: " + customerID);
+            Testing();
         }
 
         public void Testing()
         {
-            SqlConnection conn = new SqlConnection();
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"JoesBigBoyDatabase.mdf\";Integrated Security=True");
             conn.Open();
 
             SqlCommand command = new SqlCommand("Select * from Customers where Id =@id", conn);
             command.Parameters.AddWithValue("@id", customerID);
+
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    MessageBox.Show(String.Format("{0}", reader["id"]));
+                }
+            }
+            
+            conn.Close();
         }
-
-        /* Pulled from: https://stackoverflow.com/questions/25739788/select-query-to-get-data-from-sql-server
-         * 
-         * SqlConnection conn = new SqlConnection("Data Source=;Initial Catalog=;Persist Security Info=True;User ID=;Password=");
-         *  conn.Open();
-         *
-         * SqlCommand command = new SqlCommand("Select id from [table1] where name=@zip", conn);
-         *  command.Parameters.AddWithValue("@zip","india");
-         *  // int result = command.ExecuteNonQuery();
-         *  using (SqlDataReader reader = command.ExecuteReader())
-         *  {
-         *    if (reader.Read())
-         *  {
-         *       Console.WriteLine(String.Format("{0}",reader["id"]));
-         *     }
-         *  }
-         *
-         *  conn.Close();
-         * 
-         */
-
-
     }
 }
