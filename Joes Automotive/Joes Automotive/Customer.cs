@@ -33,8 +33,11 @@ namespace Joes_Automotive
 
         private void Customer_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'joesBigBoyDatabaseDataSet.Customers' table. You can move, or remove it, as needed.
-            this.customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
+        
+        }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
 
         }
     }
