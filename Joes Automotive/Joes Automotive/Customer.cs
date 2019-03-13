@@ -21,26 +21,21 @@ namespace Joes_Automotive
             this.customerID = customerID;
             InitializeComponent();
             MessageBox.Show("Viewing Customer ID: " + customerID);
-            Testing();
         }
 
-        public void Testing()
+        private void customersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"JoesBigBoyDatabase.mdf\";Integrated Security=True");
-            conn.Open();
+            this.Validate();
+            this.customersBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.joesBigBoyDatabaseDataSet);
 
-            SqlCommand command = new SqlCommand("Select * from Customers where Id =@id", conn);
-            command.Parameters.AddWithValue("@id", customerID);
+        }
 
-            using (SqlDataReader reader = command.ExecuteReader())
-            {
-                if (reader.Read())
-                {
-                    MessageBox.Show(String.Format("{0}", reader["id"]));
-                }
-            }
-            
-            conn.Close();
+        private void Customer_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'joesBigBoyDatabaseDataSet.Customers' table. You can move, or remove it, as needed.
+            this.customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
+
         }
     }
 }
