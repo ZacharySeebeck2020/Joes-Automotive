@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,14 +12,12 @@ namespace Joes_Automotive
 {
     public partial class Customer : Form
     {
-
-        private int customerID;
+        int currentCustomerID;
 
         public Customer(int customerID)
         {
-            this.customerID = customerID;
             InitializeComponent();
-            MessageBox.Show("Viewing Customer ID: " + customerID);
+            currentCustomerID = customerID;
         }
 
         private void customersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -33,10 +30,14 @@ namespace Joes_Automotive
 
         private void Customer_Load(object sender, EventArgs e)
         {
-        
+            // TODO: This line of code loads data into the 'joesBigBoyDatabaseDataSet.Customers' table. You can move, or remove it, as needed.
+            this.customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
+            bindingNavigatorPositionItem.Text = currentCustomerID.ToString();
+            customersBindingNavigator.Update();
+
         }
 
-        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        private void bindingNavigatorCountItem_Click(object sender, EventArgs e)
         {
 
         }
