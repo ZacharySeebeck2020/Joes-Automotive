@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customers));
             this.customersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.joesBigBoyDatabaseDataSet = new Joes_Automotive.JoesBigBoyDatabaseDataSet();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.customersBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.customersDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +49,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.customersTableAdapter = new Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters.CustomersTableAdapter();
             this.tableAdapterManager = new Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters.TableAdapterManager();
+            this.toolStripBtnDeleteCustomer = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingNavigator)).BeginInit();
             this.customersBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
@@ -62,10 +62,11 @@
             this.customersBindingNavigator.AddNewItem = null;
             this.customersBindingNavigator.BindingSource = this.customersBindingSource;
             this.customersBindingNavigator.CountItem = null;
-            this.customersBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.customersBindingNavigator.DeleteItem = null;
             this.customersBindingNavigator.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.customersBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorDeleteItem,
+            this.toolStripBtnDeleteCustomer,
+            this.toolStripSeparator1,
             this.customersBindingNavigatorSaveItem});
             this.customersBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.customersBindingNavigator.MoveFirstItem = null;
@@ -88,22 +89,18 @@
             this.joesBigBoyDatabaseDataSet.DataSetName = "JoesBigBoyDatabaseDataSet";
             this.joesBigBoyDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // bindingNavigatorDeleteItem
+            // toolStripSeparator1
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(32, 32);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 35);
             // 
             // customersBindingNavigatorSaveItem
             // 
-            this.customersBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.customersBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("customersBindingNavigatorSaveItem.Image")));
+            this.customersBindingNavigatorSaveItem.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customersBindingNavigatorSaveItem.Image = global::Joes_Automotive.Properties.Resources.save;
             this.customersBindingNavigatorSaveItem.Name = "customersBindingNavigatorSaveItem";
-            this.customersBindingNavigatorSaveItem.Size = new System.Drawing.Size(32, 32);
-            this.customersBindingNavigatorSaveItem.Text = "Save Data";
+            this.customersBindingNavigatorSaveItem.Size = new System.Drawing.Size(127, 32);
+            this.customersBindingNavigatorSaveItem.Text = "Save Changes";
             this.customersBindingNavigatorSaveItem.Click += new System.EventHandler(this.customersBindingNavigatorSaveItem_Click_1);
             // 
             // customersDataGridView
@@ -262,7 +259,20 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CustomersTableAdapter = this.customersTableAdapter;
+            this.tableAdapterManager.InvoicesTableAdapter = null;
+            this.tableAdapterManager.PartsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.VehiclesTableAdapter = null;
+            // 
+            // toolStripBtnDeleteCustomer
+            // 
+            this.toolStripBtnDeleteCustomer.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripBtnDeleteCustomer.Image = global::Joes_Automotive.Properties.Resources.trash;
+            this.toolStripBtnDeleteCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnDeleteCustomer.Name = "toolStripBtnDeleteCustomer";
+            this.toolStripBtnDeleteCustomer.Size = new System.Drawing.Size(200, 32);
+            this.toolStripBtnDeleteCustomer.Text = "Delete Selected Customer";
+            this.toolStripBtnDeleteCustomer.Click += new System.EventHandler(this.toolStripBtnDeleteCustomer_Click);
             // 
             // Customers
             // 
@@ -298,7 +308,6 @@
         private JoesBigBoyDatabaseDataSetTableAdapters.CustomersTableAdapter customersTableAdapter;
         private JoesBigBoyDatabaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator customersBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton customersBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView customersDataGridView;
         private System.Windows.Forms.Button btnDelete;
@@ -313,5 +322,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton toolStripBtnDeleteCustomer;
     }
 }

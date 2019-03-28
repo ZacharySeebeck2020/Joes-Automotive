@@ -36,3 +36,4 @@ C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes A
 C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes Automotive.exe
 C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes Automotive.pdb
 C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.DataConnectionTesting.resources
+C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.CustomerEdit.resources

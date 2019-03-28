@@ -29,9 +29,6 @@ namespace Joes_Automotive
         {
             // TODO: This line of code loads data into the 'joesBigBoyDatabaseDataSet.Customers' table. You can move, or remove it, as needed.
             this.customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
-            // TODO: This line of code loads data into the 'joesBigBoyDatabaseDataSet.Customers' table. You can move, or remove it, as needed.
-            this.customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
-
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -46,7 +43,9 @@ namespace Joes_Automotive
                 // DataConnectionTesting customerForm = new DataConnectionTesting(customerID);
                 // customerForm.ShowDialog();
 
-                customersTableAdapter.Update(this.joesBigBoyDatabaseDataSet.Customers);
+                CustomerEdit customerEditForm = new CustomerEdit(customerID);
+                customerEditForm.ShowDialog();
+                customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
  
             }
             catch (Exception ex)
@@ -94,6 +93,30 @@ namespace Joes_Automotive
             else
             {
                 customersTableAdapter.FillSearchedCustomers(this.joesBigBoyDatabaseDataSet.Customers, txtSearchQuery.Text);
+            }
+        }
+
+        private void toolStripBtnDeleteCustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int customerID = int.Parse(customersDataGridView.CurrentRow.Cells[0].Value.ToString());
+
+                if (MessageBox.Show("Warning. This is a destructive action that can not be undone. Are you sure you want to continue?", "Delete Customer?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    customersTableAdapter.DeleteCustomerByID(customerID);
+                    customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
+                }
+                else 
+                {
+                    customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("A problem has occured: \n\n\n\n\n\n\n\n" + ex.Message);
             }
         }
     }

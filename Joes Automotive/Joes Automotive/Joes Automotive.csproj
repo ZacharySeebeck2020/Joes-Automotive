@@ -95,6 +95,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomerEdit.resx">
+      <DependentUpon>CustomerEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DataConnectionTesting.resx">
       <DependentUpon>DataConnectionTesting.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +115,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="JoesBigBoyDatabaseDataSet.xsc">
       <DependentUpon>JoesBigBoyDatabaseDataSet.xsd</DependentUpon>
@@ -145,6 +149,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>JoesBigBoyDatabase.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\trash.png" />
+    <None Include="Resources\save.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
