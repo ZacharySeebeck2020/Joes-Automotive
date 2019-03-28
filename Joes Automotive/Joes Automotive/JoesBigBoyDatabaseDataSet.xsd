@@ -66,7 +66,7 @@ SELECT Id, name, address, phone_number, email_address, notes FROM Customers WHER
               <Mapping SourceColumn="notes" DataSetColumn="notes" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="JoesBigBoyDatabaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteCustomerByID" Modifier="Public" Name="DeleteCustomerByID" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="DeleteCustomerByID">
+              <DbSource ConnectionRef="JoesBigBoyDatabaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteCustomerByID" Modifier="Public" Name="DeleteCustomerByID" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteCustomerByID">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [Customers] WHERE (([Id] = @id))</CommandText>
@@ -76,7 +76,7 @@ SELECT Id, name, address, phone_number, email_address, notes FROM Customers WHER
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="JoesBigBoyDatabaseConnectionString (Settings)" DbObjectName="dbo.Customers" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillCustomerByID" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillCustomerByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillCustomerByID">
+              <DbSource ConnectionRef="JoesBigBoyDatabaseConnectionString (Settings)" DbObjectName="dbo.Customers" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillCustomerByID" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillCustomerByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillCustomerByID">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT * FROM Customers WHERE Id = @id</CommandText>
@@ -86,7 +86,7 @@ SELECT Id, name, address, phone_number, email_address, notes FROM Customers WHER
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="JoesBigBoyDatabaseConnectionString (Settings)" DbObjectName="dbo.Customers" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillSearchedCustomers" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorGetMethodName="GetSearchedCustomers" GeneratorSourceName="FillSearchedCustomers" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillSearchedCustomers">
+              <DbSource ConnectionRef="JoesBigBoyDatabaseConnectionString (Settings)" DbObjectName="dbo.Customers" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillSearchedCustomers" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorGetMethodName="GetSearchedCustomers" GeneratorSourceName="FillSearchedCustomers" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillSearchedCustomers">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT Id, name, address, phone_number, email_address, notes FROM Customers WHERE (CHARINDEX(@name, name) &gt; 0)</CommandText>
@@ -95,6 +95,22 @@ SELECT Id, name, address, phone_number, email_address, notes FROM Customers WHER
                     </Parameters>
                   </DbCommand>
                 </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="JoesBigBoyDatabaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertNewCustomer" Modifier="Public" Name="InsertNewCustomer" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="InsertNewCustomer">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [Customers] ([Id], [name], [address], [phone_number], [email_address], [notes]) VALUES (@Id, @name, @address, @phone_number, @email_address, @notes);
+SELECT Id, name, address, phone_number, email_address, notes FROM Customers WHERE (Id = @Id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[100B2DD5E424F7C1E613A1D87EDF479C_GITHUB\JOES-AUTOMOTIVE-THE3RDFUCKINGTIME\JOES AUTOMOTIVE\JOES AUTOMOTIVE\JOESBIGBOYDATABASE.MDF].dbo.Customers" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="name" ColumnName="name" DataSourceName="[100B2DD5E424F7C1E613A1D87EDF479C_GITHUB\JOES-AUTOMOTIVE-THE3RDFUCKINGTIME\JOES AUTOMOTIVE\JOES AUTOMOTIVE\JOESBIGBOYDATABASE.MDF].dbo.Customers" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@name" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="address" ColumnName="address" DataSourceName="[100B2DD5E424F7C1E613A1D87EDF479C_GITHUB\JOES-AUTOMOTIVE-THE3RDFUCKINGTIME\JOES AUTOMOTIVE\JOES AUTOMOTIVE\JOESBIGBOYDATABASE.MDF].dbo.Customers" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@address" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="phone_number" ColumnName="phone_number" DataSourceName="[100B2DD5E424F7C1E613A1D87EDF479C_GITHUB\JOES-AUTOMOTIVE-THE3RDFUCKINGTIME\JOES AUTOMOTIVE\JOES AUTOMOTIVE\JOESBIGBOYDATABASE.MDF].dbo.Customers" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@phone_number" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="phone_number" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="email_address" ColumnName="email_address" DataSourceName="[100B2DD5E424F7C1E613A1D87EDF479C_GITHUB\JOES-AUTOMOTIVE-THE3RDFUCKINGTIME\JOES AUTOMOTIVE\JOES AUTOMOTIVE\JOESBIGBOYDATABASE.MDF].dbo.Customers" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@email_address" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="email_address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="notes" ColumnName="notes" DataSourceName="[100B2DD5E424F7C1E613A1D87EDF479C_GITHUB\JOES-AUTOMOTIVE-THE3RDFUCKINGTIME\JOES AUTOMOTIVE\JOES AUTOMOTIVE\JOESBIGBOYDATABASE.MDF].dbo.Customers" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@notes" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="notes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
               </DbSource>
             </Sources>
           </TableAdapter>

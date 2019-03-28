@@ -32,6 +32,7 @@
             this.customersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.joesBigBoyDatabaseDataSet = new Joes_Automotive.JoesBigBoyDatabaseDataSet();
+            this.toolStripBtnDeleteCustomer = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.customersBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.customersDataGridView = new System.Windows.Forms.DataGridView();
@@ -40,16 +41,18 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnInvoices = new System.Windows.Forms.Button();
-            this.btnVehicles = new System.Windows.Forms.Button();
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtSearchQuery = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.customersTableAdapter = new Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters.CustomersTableAdapter();
             this.tableAdapterManager = new Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters.TableAdapterManager();
-            this.toolStripBtnDeleteCustomer = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnEditCustomer = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBtnCustomerInvoices = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripCustomerVehicles = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBtnNewCustomer = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingNavigator)).BeginInit();
             this.customersBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
@@ -67,7 +70,14 @@
             this.customersBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripBtnDeleteCustomer,
             this.toolStripSeparator1,
-            this.customersBindingNavigatorSaveItem});
+            this.customersBindingNavigatorSaveItem,
+            this.toolStripBtnEditCustomer,
+            this.toolStripSeparator2,
+            this.toolStripBtnCustomerInvoices,
+            this.toolStripSeparator3,
+            this.toolStripCustomerVehicles,
+            this.toolStripSeparator4,
+            this.toolStripBtnNewCustomer});
             this.customersBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.customersBindingNavigator.MoveFirstItem = null;
             this.customersBindingNavigator.MoveLastItem = null;
@@ -89,6 +99,16 @@
             this.joesBigBoyDatabaseDataSet.DataSetName = "JoesBigBoyDatabaseDataSet";
             this.joesBigBoyDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // toolStripBtnDeleteCustomer
+            // 
+            this.toolStripBtnDeleteCustomer.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripBtnDeleteCustomer.Image = global::Joes_Automotive.Properties.Resources.garbage;
+            this.toolStripBtnDeleteCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnDeleteCustomer.Name = "toolStripBtnDeleteCustomer";
+            this.toolStripBtnDeleteCustomer.Size = new System.Drawing.Size(200, 32);
+            this.toolStripBtnDeleteCustomer.Text = "Delete Selected Customer";
+            this.toolStripBtnDeleteCustomer.Click += new System.EventHandler(this.toolStripBtnDeleteCustomer_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -96,6 +116,7 @@
             // 
             // customersBindingNavigatorSaveItem
             // 
+            this.customersBindingNavigatorSaveItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.customersBindingNavigatorSaveItem.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customersBindingNavigatorSaveItem.Image = global::Joes_Automotive.Properties.Resources.save;
             this.customersBindingNavigatorSaveItem.Name = "customersBindingNavigatorSaveItem";
@@ -124,7 +145,7 @@
             this.customersDataGridView.ReadOnly = true;
             this.customersDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.customersDataGridView.RowTemplate.Height = 31;
-            this.customersDataGridView.Size = new System.Drawing.Size(1240, 567);
+            this.customersDataGridView.Size = new System.Drawing.Size(1240, 607);
             this.customersDataGridView.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn1
@@ -166,58 +187,6 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Email Address";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDelete.AutoSize = true;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(947, 635);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(305, 34);
-            this.btnDelete.TabIndex = 5;
-            this.btnDelete.Text = "&Delete Customer";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnEdit.AutoSize = true;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(12, 635);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(305, 34);
-            this.btnEdit.TabIndex = 6;
-            this.btnEdit.Text = "&Edit Customer";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnInvoices
-            // 
-            this.btnInvoices.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnInvoices.AutoSize = true;
-            this.btnInvoices.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInvoices.Location = new System.Drawing.Point(323, 635);
-            this.btnInvoices.Name = "btnInvoices";
-            this.btnInvoices.Size = new System.Drawing.Size(305, 34);
-            this.btnInvoices.TabIndex = 7;
-            this.btnInvoices.Text = "Customer\'s &Invoices";
-            this.btnInvoices.UseVisualStyleBackColor = true;
-            this.btnInvoices.Click += new System.EventHandler(this.btnInvoices_Click);
-            // 
-            // btnVehicles
-            // 
-            this.btnVehicles.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnVehicles.AutoSize = true;
-            this.btnVehicles.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVehicles.Location = new System.Drawing.Point(636, 635);
-            this.btnVehicles.Name = "btnVehicles";
-            this.btnVehicles.Size = new System.Drawing.Size(305, 34);
-            this.btnVehicles.TabIndex = 8;
-            this.btnVehicles.Text = "Customer\'s &Vehicles";
-            this.btnVehicles.UseVisualStyleBackColor = true;
-            this.btnVehicles.Click += new System.EventHandler(this.btnVehicles_Click);
             // 
             // lblSearch
             // 
@@ -264,15 +233,56 @@
             this.tableAdapterManager.UpdateOrder = Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.VehiclesTableAdapter = null;
             // 
-            // toolStripBtnDeleteCustomer
+            // toolStripBtnEditCustomer
             // 
-            this.toolStripBtnDeleteCustomer.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripBtnDeleteCustomer.Image = global::Joes_Automotive.Properties.Resources.trash;
-            this.toolStripBtnDeleteCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnDeleteCustomer.Name = "toolStripBtnDeleteCustomer";
-            this.toolStripBtnDeleteCustomer.Size = new System.Drawing.Size(200, 32);
-            this.toolStripBtnDeleteCustomer.Text = "Delete Selected Customer";
-            this.toolStripBtnDeleteCustomer.Click += new System.EventHandler(this.toolStripBtnDeleteCustomer_Click);
+            this.toolStripBtnEditCustomer.Image = global::Joes_Automotive.Properties.Resources.avatar;
+            this.toolStripBtnEditCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnEditCustomer.Name = "toolStripBtnEditCustomer";
+            this.toolStripBtnEditCustomer.Size = new System.Drawing.Size(114, 32);
+            this.toolStripBtnEditCustomer.Text = "Edit Customer";
+            this.toolStripBtnEditCustomer.Click += new System.EventHandler(this.toolStripBtnEditCustomer_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 35);
+            // 
+            // toolStripBtnCustomerInvoices
+            // 
+            this.toolStripBtnCustomerInvoices.Image = global::Joes_Automotive.Properties.Resources.receipt;
+            this.toolStripBtnCustomerInvoices.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnCustomerInvoices.Name = "toolStripBtnCustomerInvoices";
+            this.toolStripBtnCustomerInvoices.Size = new System.Drawing.Size(137, 32);
+            this.toolStripBtnCustomerInvoices.Text = "Customer Invoices";
+            this.toolStripBtnCustomerInvoices.Click += new System.EventHandler(this.toolStripBtnCustomerInvoices_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 35);
+            // 
+            // toolStripCustomerVehicles
+            // 
+            this.toolStripCustomerVehicles.Image = global::Joes_Automotive.Properties.Resources.car;
+            this.toolStripCustomerVehicles.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripCustomerVehicles.Name = "toolStripCustomerVehicles";
+            this.toolStripCustomerVehicles.Size = new System.Drawing.Size(136, 32);
+            this.toolStripCustomerVehicles.Text = "Customer Vehicles";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 35);
+            // 
+            // toolStripBtnNewCustomer
+            // 
+            this.toolStripBtnNewCustomer.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripBtnNewCustomer.Image = global::Joes_Automotive.Properties.Resources.avatar;
+            this.toolStripBtnNewCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnNewCustomer.Name = "toolStripBtnNewCustomer";
+            this.toolStripBtnNewCustomer.Size = new System.Drawing.Size(118, 32);
+            this.toolStripBtnNewCustomer.Text = "New Customer";
             // 
             // Customers
             // 
@@ -284,10 +294,6 @@
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.customersDataGridView);
             this.Controls.Add(this.customersBindingNavigator);
-            this.Controls.Add(this.btnVehicles);
-            this.Controls.Add(this.btnInvoices);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnDelete);
             this.Name = "Customers";
             this.Text = " All Customers";
             this.Load += new System.EventHandler(this.Customers_Load);
@@ -310,10 +316,6 @@
         private System.Windows.Forms.BindingNavigator customersBindingNavigator;
         private System.Windows.Forms.ToolStripButton customersBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView customersDataGridView;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnInvoices;
-        private System.Windows.Forms.Button btnVehicles;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox txtSearchQuery;
         private System.Windows.Forms.Button btnSearch;
@@ -324,5 +326,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripBtnDeleteCustomer;
+        private System.Windows.Forms.ToolStripButton toolStripBtnEditCustomer;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripBtnCustomerInvoices;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton toolStripCustomerVehicles;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton toolStripBtnNewCustomer;
     }
 }

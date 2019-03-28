@@ -31,31 +31,6 @@ namespace Joes_Automotive
             this.customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int customerID = int.Parse(customersDataGridView.CurrentRow.Cells[0].Value.ToString());
-
-                MessageBox.Show("Open editing window with information of ID: " + customerID.ToString());
-
-                // Ignore these. They are just for testing purposes and are left here for quick use.
-                // DataConnectionTesting customerForm = new DataConnectionTesting(customerID);
-                // customerForm.ShowDialog();
-
-                CustomerEdit customerEditForm = new CustomerEdit(customerID);
-                customerEditForm.ShowDialog();
-                customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
- 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("There was a problem editing the customer. Please try again later.\n \n \n \n \n \n " +
-                    "Error message: \n" +
-                    ex.Message);
-            }
-        }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
 
@@ -118,6 +93,36 @@ namespace Joes_Automotive
             {
                 MessageBox.Show("A problem has occured: \n\n\n\n\n\n\n\n" + ex.Message);
             }
+        }
+
+        private void toolStripBtnEditCustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int customerID = int.Parse(customersDataGridView.CurrentRow.Cells[0].Value.ToString());
+
+                MessageBox.Show("Open editing window with information of ID: " + customerID.ToString());
+                 
+                // Ignore these. They are just for testing purposes and are left here for quick use.
+                // DataConnectionTesting customerForm = new DataConnectionTesting(customerID);
+                // customerForm.ShowDialog();
+
+                CustomerEdit customerEditForm = new CustomerEdit(customerID);
+                customerEditForm.ShowDialog();
+                customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was a problem editing the customer. Please try again later.\n \n \n \n \n \n " +
+                    "Error message: \n" +
+                    ex.Message);
+            }
+        }
+
+        private void toolStripBtnCustomerInvoices_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

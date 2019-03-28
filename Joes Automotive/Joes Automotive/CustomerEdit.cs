@@ -44,5 +44,15 @@ namespace Joes_Automotive
                 this.Close();
             }
         }
+
+        private void addressLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void email_addressLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

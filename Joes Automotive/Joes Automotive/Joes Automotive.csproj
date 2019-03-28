@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerCreate.Designer.cs">
+      <DependentUpon>CustomerCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomerCreate.resx">
+      <DependentUpon>CustomerCreate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerEdit.resx">
       <DependentUpon>CustomerEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,14 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="JoesBigBoyDatabaseDataSet.xsc">
       <DependentUpon>JoesBigBoyDatabaseDataSet.xsd</DependentUpon>
     </None>
@@ -132,6 +136,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -149,8 +158,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>JoesBigBoyDatabase.mdf</DependentUpon>
     </Content>
-    <None Include="Resources\trash.png" />
     <None Include="Resources\save.png" />
+    <None Include="Resources\receipt.png" />
+    <None Include="Resources\garbage.png" />
+    <None Include="Resources\car.png" />
+    <None Include="Resources\avatar.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
