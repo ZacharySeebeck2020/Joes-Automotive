@@ -61,11 +61,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer.cs">
+    <Compile Include="CustomerEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer.Designer.cs">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <Compile Include="CustomerEdit.Designer.cs">
+      <DependentUpon>CustomerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataConnectionTesting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataConnectionTesting.Designer.cs">
+      <DependentUpon>DataConnectionTesting.cs</DependentUpon>
     </Compile>
     <Compile Include="Customers.cs">
       <SubType>Form</SubType>
@@ -79,6 +85,9 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="JoesBigBoyDatabaseDataSet.cs">
+      <DependentUpon>JoesBigBoyDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="JoesBigBoyDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -86,8 +95,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Customer.resx">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <EmbeddedResource Include="DataConnectionTesting.resx">
+      <DependentUpon>DataConnectionTesting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customers.resx">
       <DependentUpon>Customers.cs</DependentUpon>

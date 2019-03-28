@@ -40,8 +40,12 @@ namespace Joes_Automotive
             {
                 int customerID = int.Parse(customersDataGridView.CurrentRow.Cells[0].Value.ToString());
 
-                Customer customerForm = new Customer(customerID);
-                customerForm.ShowDialog();
+                MessageBox.Show("Open editing window with information of ID: " + customerID.ToString());
+
+                // Ignore these. They are just for testing purposes and are left here for quick use.
+                // DataConnectionTesting customerForm = new DataConnectionTesting(customerID);
+                // customerForm.ShowDialog();
+
                 customersTableAdapter.Update(this.joesBigBoyDatabaseDataSet.Customers);
  
             }
@@ -64,6 +68,33 @@ namespace Joes_Automotive
             this.customersBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.joesBigBoyDatabaseDataSet);
 
+        }
+
+        private void btnInvoices_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVehicles_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            customersTableAdapter.FillSearchedCustomers(this.joesBigBoyDatabaseDataSet.Customers, txtSearchQuery.Text);
+        }
+
+        private void txtSearchQuery_Key(object sender, KeyEventArgs e)
+        {
+            if (txtSearchQuery.Text == "")
+            {
+                customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
+            }
+            else
+            {
+                customersTableAdapter.FillSearchedCustomers(this.joesBigBoyDatabaseDataSet.Customers, txtSearchQuery.Text);
+            }
         }
     }
 }

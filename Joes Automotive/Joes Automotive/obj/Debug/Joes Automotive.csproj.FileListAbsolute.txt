@@ -28,7 +28,6 @@ C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes A
 C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\bin\Debug\Joes Automotive.exe
 C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\bin\Debug\Joes Automotive.pdb
 C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes Automotive.csprojAssemblyReference.cache
-C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.Customer.resources
 C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.Customers.resources
 C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.Home.resources
 C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.Properties.Resources.resources
@@ -36,3 +35,4 @@ C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes A
 C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes Automotive.csproj.CoreCompileInputs.cache
 C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes Automotive.exe
 C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes Automotive.pdb
+C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.DataConnectionTesting.resources
