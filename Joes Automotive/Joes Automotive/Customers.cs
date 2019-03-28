@@ -29,6 +29,8 @@ namespace Joes_Automotive
         {
             // TODO: This line of code loads data into the 'joesBigBoyDatabaseDataSet.Customers' table. You can move, or remove it, as needed.
             this.customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
+            // TODO: This line of code loads data into the 'joesBigBoyDatabaseDataSet.Customers' table. You can move, or remove it, as needed.
+            this.customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
 
         }
 
@@ -40,6 +42,8 @@ namespace Joes_Automotive
 
                 Customer customerForm = new Customer(customerID);
                 customerForm.ShowDialog();
+                customersTableAdapter.Update(this.joesBigBoyDatabaseDataSet.Customers);
+ 
             }
             catch (Exception ex)
             {
@@ -51,6 +55,14 @@ namespace Joes_Automotive
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void customersBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.customersBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.joesBigBoyDatabaseDataSet);
 
         }
     }

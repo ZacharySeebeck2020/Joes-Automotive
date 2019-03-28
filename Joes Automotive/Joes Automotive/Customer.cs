@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,29 +21,57 @@ namespace Joes_Automotive
             currentCustomerID = customerID;
         }
 
-        private void customersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.customersBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.joesBigBoyDatabaseDataSet);
-
-        }
-
-        private void Customer_Load(object sender, EventArgs e)
-        {
-            bindingNavigatorPositionItem.Focus();
-            // TODO: This line of code loads data into the 'joesBigBoyDatabaseDataSet.Customers' table. You can move, or remove it, as needed.
-            this.customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
-            bindingNavigatorPositionItem.Text = currentCustomerID.ToString();
-            customersBindingNavigator.Update();
-            this.tableAdapterManager.UpdateAll(this.joesBigBoyDatabaseDataSet);
-
-
-        }
 
         private void bindingNavigatorCountItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLookup_Click(object sender, EventArgs e)
+        {
+            using (var connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\JoesBigBoyDatabase.mdf;Integrated Security=True"))
+            {
+                connection.Open();
+                using (var cmd = new SqlCommand("SELECT * FROM Customers WHERE ID=@ID", connection))
+                {
+                    cmd.Parameters.Add("@ID", SqlDbType.VarChar).Value = txtLookupId.Text;
+                    SqlDataReader re = cmd.ExecuteReader();
+
+                    if (re.Read())
+                    {
+                        txtOutputID.Text = re["id"].ToString();
+                        txtOutputName.Text = re["name"].ToString();
+                        txtOutputAddress.Text = re["address"].ToString();
+                        txtOutputPhoneNum.Text = re["phone_number"].ToString();
+                        txtOutputEmail.Text = re["email_address"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter a valid customer id");
+                    }
+                }
+            }
+        }
+
+        private void btnSaveExit_Click(object sender, EventArgs e)
+        {
+            using (var connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\JoesBigBoyDatabase.mdf;Integrated Security=True"))
+            {
+                connection.Open();
+                // command.CommandText = "UPDATE Student SET Address = @add, City = @cit Where FirstName = @fn and LastName = @add";
+                using (SqlCommand command = new SqlCommand("UPDATE Customers SET name = @name, address = @address, phone_number = @phone_number, email_address = @email_address WHERE Id = @id", connection))
+                {
+                    command.Parameters.AddWithValue("@Id", txtOutputID.Text);
+                    command.Parameters.AddWithValue("@name", txtOutputName.Text);
+                    command.Parameters.AddWithValue("@address", txtOutputAddress.Text);
+                    command.Parameters.AddWithValue("@phone_number", txtOutputPhoneNum.Text);
+                    command.Parameters.AddWithValue("@email_address", txtOutputEmail.Text);
+
+                    MessageBox.Show(command.ExecuteNonQuery().ToString());
+                }
+            }
+
+            this.Close();
         }
     }
 }
