@@ -35,6 +35,13 @@
             this.toolStripBtnDeleteCustomer = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.customersBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnEditCustomer = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBtnCustomerInvoices = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripCustomerVehicles = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripBtnNewCustomer = new System.Windows.Forms.ToolStripButton();
             this.customersDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,13 +53,6 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.customersTableAdapter = new Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters.CustomersTableAdapter();
             this.tableAdapterManager = new Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters.TableAdapterManager();
-            this.toolStripBtnEditCustomer = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBtnCustomerInvoices = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripCustomerVehicles = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripBtnNewCustomer = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingNavigator)).BeginInit();
             this.customersBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
@@ -124,6 +124,58 @@
             this.customersBindingNavigatorSaveItem.Text = "Save Changes";
             this.customersBindingNavigatorSaveItem.Click += new System.EventHandler(this.customersBindingNavigatorSaveItem_Click_1);
             // 
+            // toolStripBtnEditCustomer
+            // 
+            this.toolStripBtnEditCustomer.Image = global::Joes_Automotive.Properties.Resources.avatar;
+            this.toolStripBtnEditCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnEditCustomer.Name = "toolStripBtnEditCustomer";
+            this.toolStripBtnEditCustomer.Size = new System.Drawing.Size(114, 32);
+            this.toolStripBtnEditCustomer.Text = "Edit Customer";
+            this.toolStripBtnEditCustomer.Click += new System.EventHandler(this.toolStripBtnEditCustomer_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 35);
+            // 
+            // toolStripBtnCustomerInvoices
+            // 
+            this.toolStripBtnCustomerInvoices.Image = global::Joes_Automotive.Properties.Resources.receipt;
+            this.toolStripBtnCustomerInvoices.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnCustomerInvoices.Name = "toolStripBtnCustomerInvoices";
+            this.toolStripBtnCustomerInvoices.Size = new System.Drawing.Size(137, 32);
+            this.toolStripBtnCustomerInvoices.Text = "Customer Invoices";
+            this.toolStripBtnCustomerInvoices.Click += new System.EventHandler(this.toolStripBtnCustomerInvoices_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 35);
+            // 
+            // toolStripCustomerVehicles
+            // 
+            this.toolStripCustomerVehicles.Image = global::Joes_Automotive.Properties.Resources.car;
+            this.toolStripCustomerVehicles.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripCustomerVehicles.Name = "toolStripCustomerVehicles";
+            this.toolStripCustomerVehicles.Size = new System.Drawing.Size(136, 32);
+            this.toolStripCustomerVehicles.Text = "Customer Vehicles";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 35);
+            // 
+            // toolStripBtnNewCustomer
+            // 
+            this.toolStripBtnNewCustomer.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripBtnNewCustomer.Image = global::Joes_Automotive.Properties.Resources.avatar;
+            this.toolStripBtnNewCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnNewCustomer.Name = "toolStripBtnNewCustomer";
+            this.toolStripBtnNewCustomer.Size = new System.Drawing.Size(118, 32);
+            this.toolStripBtnNewCustomer.Text = "New Customer";
+            this.toolStripBtnNewCustomer.Click += new System.EventHandler(this.toolStripBtnNewCustomer_Click);
+            // 
             // customersDataGridView
             // 
             this.customersDataGridView.AllowUserToAddRows = false;
@@ -140,12 +192,12 @@
             this.dataGridViewTextBoxColumn5});
             this.customersDataGridView.DataSource = this.customersBindingSource;
             this.customersDataGridView.Location = new System.Drawing.Point(12, 63);
-            this.customersDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.customersDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customersDataGridView.Name = "customersDataGridView";
             this.customersDataGridView.ReadOnly = true;
             this.customersDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.customersDataGridView.RowTemplate.Height = 31;
-            this.customersDataGridView.Size = new System.Drawing.Size(1240, 607);
+            this.customersDataGridView.Size = new System.Drawing.Size(1240, 608);
             this.customersDataGridView.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn1
@@ -232,57 +284,6 @@
             this.tableAdapterManager.PartsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.VehiclesTableAdapter = null;
-            // 
-            // toolStripBtnEditCustomer
-            // 
-            this.toolStripBtnEditCustomer.Image = global::Joes_Automotive.Properties.Resources.avatar;
-            this.toolStripBtnEditCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnEditCustomer.Name = "toolStripBtnEditCustomer";
-            this.toolStripBtnEditCustomer.Size = new System.Drawing.Size(114, 32);
-            this.toolStripBtnEditCustomer.Text = "Edit Customer";
-            this.toolStripBtnEditCustomer.Click += new System.EventHandler(this.toolStripBtnEditCustomer_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 35);
-            // 
-            // toolStripBtnCustomerInvoices
-            // 
-            this.toolStripBtnCustomerInvoices.Image = global::Joes_Automotive.Properties.Resources.receipt;
-            this.toolStripBtnCustomerInvoices.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnCustomerInvoices.Name = "toolStripBtnCustomerInvoices";
-            this.toolStripBtnCustomerInvoices.Size = new System.Drawing.Size(137, 32);
-            this.toolStripBtnCustomerInvoices.Text = "Customer Invoices";
-            this.toolStripBtnCustomerInvoices.Click += new System.EventHandler(this.toolStripBtnCustomerInvoices_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 35);
-            // 
-            // toolStripCustomerVehicles
-            // 
-            this.toolStripCustomerVehicles.Image = global::Joes_Automotive.Properties.Resources.car;
-            this.toolStripCustomerVehicles.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripCustomerVehicles.Name = "toolStripCustomerVehicles";
-            this.toolStripCustomerVehicles.Size = new System.Drawing.Size(136, 32);
-            this.toolStripCustomerVehicles.Text = "Customer Vehicles";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 35);
-            // 
-            // toolStripBtnNewCustomer
-            // 
-            this.toolStripBtnNewCustomer.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripBtnNewCustomer.Image = global::Joes_Automotive.Properties.Resources.avatar;
-            this.toolStripBtnNewCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnNewCustomer.Name = "toolStripBtnNewCustomer";
-            this.toolStripBtnNewCustomer.Size = new System.Drawing.Size(118, 32);
-            this.toolStripBtnNewCustomer.Text = "New Customer";
             // 
             // Customers
             // 

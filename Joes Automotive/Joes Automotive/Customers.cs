@@ -82,7 +82,7 @@ namespace Joes_Automotive
                     customersTableAdapter.DeleteCustomerByID(customerID);
                     customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
                 }
-                else 
+                else
                 {
                     customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
                 }
@@ -102,7 +102,7 @@ namespace Joes_Automotive
                 int customerID = int.Parse(customersDataGridView.CurrentRow.Cells[0].Value.ToString());
 
                 MessageBox.Show("Open editing window with information of ID: " + customerID.ToString());
-                 
+
                 // Ignore these. They are just for testing purposes and are left here for quick use.
                 // DataConnectionTesting customerForm = new DataConnectionTesting(customerID);
                 // customerForm.ShowDialog();
@@ -123,6 +123,24 @@ namespace Joes_Automotive
         private void toolStripBtnCustomerInvoices_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripBtnNewCustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CustomerCreate customerCreateForm = new CustomerCreate();
+                customerCreateForm.ShowDialog();
+                customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was a problem creating the customer. Please try again later.\n \n \n \n \n \n " +
+                    "Error message: \n" + ex.Message);
+
+
+            }
         }
     }
 }

@@ -22,14 +22,17 @@ namespace Joes_Automotive
             this.Validate();
             this.customersBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.joesBigBoyDatabaseDataSet);
-
         }
 
         private void CustomerCreate_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'joesBigBoyDatabaseDataSet.Customers' table. You can move, or remove it, as needed.
-            this.customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
 
+        }
+
+        private void toolStripBtnCreateExit_Click(object sender, EventArgs e)
+        {
+            customersTableAdapter.InsertNewCustomer(14, nameTextBox.Text, addressTextBox.Text, phone_numberTextBox.Text, email_addressTextBox.Text, notesTextBox.Text);
+            this.Close();
         }
     }
 }
