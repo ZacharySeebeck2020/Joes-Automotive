@@ -101,6 +101,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vehicles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicles.Designer.cs">
+      <DependentUpon>Vehicles.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CustomerCreate.resx">
       <DependentUpon>CustomerCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +126,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicles.resx">
+      <DependentUpon>Vehicles.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="JoesBigBoyDatabaseDataSet.xsc">
       <DependentUpon>JoesBigBoyDatabaseDataSet.xsd</DependentUpon>
@@ -158,6 +167,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>JoesBigBoyDatabase.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\tools_black.png" />
     <None Include="Resources\save.png" />
     <None Include="Resources\receipt.png" />
     <None Include="Resources\garbage.png" />

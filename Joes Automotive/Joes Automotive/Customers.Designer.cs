@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customers));
             this.customersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.joesBigBoyDatabaseDataSet = new Joes_Automotive.JoesBigBoyDatabaseDataSet();
@@ -126,7 +127,7 @@
             // 
             // toolStripBtnEditCustomer
             // 
-            this.toolStripBtnEditCustomer.Image = global::Joes_Automotive.Properties.Resources.avatar;
+            this.toolStripBtnEditCustomer.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnEditCustomer.Image")));
             this.toolStripBtnEditCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnEditCustomer.Name = "toolStripBtnEditCustomer";
             this.toolStripBtnEditCustomer.Size = new System.Drawing.Size(114, 32);
@@ -169,7 +170,7 @@
             // toolStripBtnNewCustomer
             // 
             this.toolStripBtnNewCustomer.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripBtnNewCustomer.Image = global::Joes_Automotive.Properties.Resources.avatar;
+            this.toolStripBtnNewCustomer.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnNewCustomer.Image")));
             this.toolStripBtnNewCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnNewCustomer.Name = "toolStripBtnNewCustomer";
             this.toolStripBtnNewCustomer.Size = new System.Drawing.Size(118, 32);
@@ -192,7 +193,7 @@
             this.dataGridViewTextBoxColumn5});
             this.customersDataGridView.DataSource = this.customersBindingSource;
             this.customersDataGridView.Location = new System.Drawing.Point(12, 63);
-            this.customersDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.customersDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.customersDataGridView.Name = "customersDataGridView";
             this.customersDataGridView.ReadOnly = true;
             this.customersDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;

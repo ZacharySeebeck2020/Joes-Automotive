@@ -24,7 +24,7 @@ namespace Joes_Automotive
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
-            Form customers = new Customers();
+            Customers customers = new Customers();
             this.Hide();
             customers.ShowDialog();
             this.Show();
@@ -32,7 +32,10 @@ namespace Joes_Automotive
 
         private void btnVehicles_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This screen has not been implemented yet.");
+            Vehicles vehicles = new Vehicles();
+            this.Hide();
+            vehicles.ShowDialog();
+            this.Show();
         }   
 
         private void btnParts_Click(object sender, EventArgs e)
