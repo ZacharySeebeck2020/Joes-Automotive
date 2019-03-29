@@ -31,7 +31,7 @@ namespace Joes_Automotive
 
         private void toolStripBtnCreateExit_Click(object sender, EventArgs e)
         {
-            customersTableAdapter.InsertNewCustomer(14, nameTextBox.Text, addressTextBox.Text, phone_numberTextBox.Text, email_addressTextBox.Text, notesTextBox.Text);
+            customersTableAdapter.InsertNewCustomer(nameTextBox.Text, addressTextBox.Text, phone_numberTextBox.Text, email_addressTextBox.Text, notesTextBox.Text);
             this.Close();
         }
     }

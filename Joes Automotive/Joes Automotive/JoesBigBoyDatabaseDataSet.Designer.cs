@@ -2448,12 +2448,11 @@ SELECT Id, name, address, phone_number, email_address, notes FROM Customers WHER
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "INSERT INTO [Customers] ([Id], [name], [address], [phone_number], [email_address]" +
-                ", [notes]) VALUES (@Id, @name, @address, @phone_number, @email_address, @notes);" +
-                "\r\nSELECT Id, name, address, phone_number, email_address, notes FROM Customers WH" +
-                "ERE (Id = @Id)";
+            this._commandCollection[4].CommandText = "INSERT INTO [Customers] ([name], [address], [phone_number], [email_address], [not" +
+                "es]) VALUES (@name, @address, @phone_number, @email_address, @notes);\r\nSELECT Id" +
+                ", name, address, phone_number, email_address, notes FROM Customers WHERE (name =" +
+                " @name)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@address", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@phone_number", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "phone_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2722,38 +2721,37 @@ SELECT Id, name, address, phone_number, email_address, notes FROM Customers WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertNewCustomer(int Id, string name, string address, string phone_number, string email_address, string notes) {
+        public virtual int InsertNewCustomer(string name, string address, string phone_number, string email_address, string notes) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
-            command.Parameters[0].Value = ((int)(Id));
             if ((name == null)) {
                 throw new global::System.ArgumentNullException("name");
             }
             else {
-                command.Parameters[1].Value = ((string)(name));
+                command.Parameters[0].Value = ((string)(name));
             }
             if ((address == null)) {
                 throw new global::System.ArgumentNullException("address");
             }
             else {
-                command.Parameters[2].Value = ((string)(address));
+                command.Parameters[1].Value = ((string)(address));
             }
             if ((phone_number == null)) {
                 throw new global::System.ArgumentNullException("phone_number");
             }
             else {
-                command.Parameters[3].Value = ((string)(phone_number));
+                command.Parameters[2].Value = ((string)(phone_number));
             }
             if ((email_address == null)) {
                 throw new global::System.ArgumentNullException("email_address");
             }
             else {
-                command.Parameters[4].Value = ((string)(email_address));
+                command.Parameters[3].Value = ((string)(email_address));
             }
             if ((notes == null)) {
-                command.Parameters[5].Value = global::System.DBNull.Value;
+                command.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[5].Value = ((string)(notes));
+                command.Parameters[4].Value = ((string)(notes));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
