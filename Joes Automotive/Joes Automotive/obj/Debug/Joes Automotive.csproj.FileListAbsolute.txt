@@ -55,3 +55,4 @@ C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive-The3rdFuckingTime\Joes
 C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive-The3rdFuckingTime\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.CustomerCreate.resources
 C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.CustomerCreate.resources
 C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.Vehicles.resources
+C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive-The3rdFuckingTime\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.Vehicles.resources
