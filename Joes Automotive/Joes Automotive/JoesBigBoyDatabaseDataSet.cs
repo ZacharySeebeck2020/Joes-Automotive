@@ -4,6 +4,9 @@
 
     partial class JoesBigBoyDatabaseDataSet
     {
+        partial class InvoicesDataTable
+        {
+        }
     }
 }
 

@@ -101,12 +101,6 @@ namespace Joes_Automotive
             {
                 int customerID = int.Parse(customersDataGridView.CurrentRow.Cells[0].Value.ToString());
 
-                MessageBox.Show("Open editing window with information of ID: " + customerID.ToString());
-
-                // Ignore these. They are just for testing purposes and are left here for quick use.
-                // DataConnectionTesting customerForm = new DataConnectionTesting(customerID);
-                // customerForm.ShowDialog();
-
                 CustomerEdit customerEditForm = new CustomerEdit(customerID);
                 customerEditForm.ShowDialog();
                 customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);

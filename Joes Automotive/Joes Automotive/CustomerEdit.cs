@@ -45,14 +45,21 @@ namespace Joes_Automotive
             }
         }
 
-        private void addressLabel_Click(object sender, EventArgs e)
+        private void toolStripBtnViewVehicles_Click(object sender, EventArgs e)
         {
-
+            // Open a form with customer vehicles and the ability to create a new vehicle.
+            CustomerVehicles cv = new CustomerVehicles(customerID);
+            cv.Show();
         }
 
-        private void email_addressLabel_Click(object sender, EventArgs e)
+        private void toolStripBtnViewInvoices_Click(object sender, EventArgs e)
         {
+            // Open a form with customer invoces sorted into 2 tables. 1 for those invoices that have been completed, and one for those that have not.
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Open dialouge to upload an image. Then change it into the correct format to be stored in a database.
         }
     }
 }

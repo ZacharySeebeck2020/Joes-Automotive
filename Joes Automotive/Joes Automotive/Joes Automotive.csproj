@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Joes_Automotive</RootNamespace>
     <AssemblyName>Joes Automotive</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -74,6 +74,12 @@
     <Compile Include="CustomerEdit.Designer.cs">
       <DependentUpon>CustomerEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerVehicles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles.Designer.cs">
+      <DependentUpon>CustomerVehicles.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataConnectionTesting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerEdit.resx">
       <DependentUpon>CustomerEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles.resx">
+      <DependentUpon>CustomerVehicles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataConnectionTesting.resx">
       <DependentUpon>DataConnectionTesting.cs</DependentUpon>
