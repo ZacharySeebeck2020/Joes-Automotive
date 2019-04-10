@@ -37,7 +37,7 @@ namespace Joes_Automotive
             {
                 int vehicleID = int.Parse(vehiclesDataGridView.CurrentRow.Cells[0].Value.ToString());
 
-                VehicleEdit vehicleEdit = new VehicleEdit(customerID);
+                VehicleEdit vehicleEdit = new VehicleEdit(vehicleID);
                 vehicleEdit.ShowDialog();
 
                 vehiclesTableAdapter.FillByCustomerID(this.joesBigBoyDatabaseDataSet.Vehicles, customerID);
