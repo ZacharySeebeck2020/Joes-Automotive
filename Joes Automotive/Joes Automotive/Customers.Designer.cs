@@ -102,11 +102,11 @@
             // 
             // toolStripBtnDeleteCustomer
             // 
-            this.toolStripBtnDeleteCustomer.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripBtnDeleteCustomer.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripBtnDeleteCustomer.Image = global::Joes_Automotive.Properties.Resources.garbage;
             this.toolStripBtnDeleteCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnDeleteCustomer.Name = "toolStripBtnDeleteCustomer";
-            this.toolStripBtnDeleteCustomer.Size = new System.Drawing.Size(200, 32);
+            this.toolStripBtnDeleteCustomer.Size = new System.Drawing.Size(239, 32);
             this.toolStripBtnDeleteCustomer.Text = "Delete Selected Customer";
             this.toolStripBtnDeleteCustomer.Click += new System.EventHandler(this.toolStripBtnDeleteCustomer_Click);
             // 
@@ -118,19 +118,20 @@
             // customersBindingNavigatorSaveItem
             // 
             this.customersBindingNavigatorSaveItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.customersBindingNavigatorSaveItem.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customersBindingNavigatorSaveItem.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customersBindingNavigatorSaveItem.Image = global::Joes_Automotive.Properties.Resources.save;
             this.customersBindingNavigatorSaveItem.Name = "customersBindingNavigatorSaveItem";
-            this.customersBindingNavigatorSaveItem.Size = new System.Drawing.Size(127, 32);
+            this.customersBindingNavigatorSaveItem.Size = new System.Drawing.Size(148, 32);
             this.customersBindingNavigatorSaveItem.Text = "Save Changes";
             this.customersBindingNavigatorSaveItem.Click += new System.EventHandler(this.customersBindingNavigatorSaveItem_Click_1);
             // 
             // toolStripBtnEditCustomer
             // 
+            this.toolStripBtnEditCustomer.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripBtnEditCustomer.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnEditCustomer.Image")));
             this.toolStripBtnEditCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnEditCustomer.Name = "toolStripBtnEditCustomer";
-            this.toolStripBtnEditCustomer.Size = new System.Drawing.Size(114, 32);
+            this.toolStripBtnEditCustomer.Size = new System.Drawing.Size(150, 32);
             this.toolStripBtnEditCustomer.Text = "Edit Customer";
             this.toolStripBtnEditCustomer.Click += new System.EventHandler(this.toolStripBtnEditCustomer_Click);
             // 
@@ -141,10 +142,11 @@
             // 
             // toolStripBtnCustomerInvoices
             // 
+            this.toolStripBtnCustomerInvoices.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripBtnCustomerInvoices.Image = global::Joes_Automotive.Properties.Resources.receipt;
             this.toolStripBtnCustomerInvoices.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnCustomerInvoices.Name = "toolStripBtnCustomerInvoices";
-            this.toolStripBtnCustomerInvoices.Size = new System.Drawing.Size(137, 32);
+            this.toolStripBtnCustomerInvoices.Size = new System.Drawing.Size(182, 32);
             this.toolStripBtnCustomerInvoices.Text = "Customer Invoices";
             this.toolStripBtnCustomerInvoices.Click += new System.EventHandler(this.toolStripBtnCustomerInvoices_Click);
             // 
@@ -155,11 +157,13 @@
             // 
             // toolStripCustomerVehicles
             // 
+            this.toolStripCustomerVehicles.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripCustomerVehicles.Image = global::Joes_Automotive.Properties.Resources.car;
             this.toolStripCustomerVehicles.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripCustomerVehicles.Name = "toolStripCustomerVehicles";
-            this.toolStripCustomerVehicles.Size = new System.Drawing.Size(136, 32);
+            this.toolStripCustomerVehicles.Size = new System.Drawing.Size(183, 32);
             this.toolStripCustomerVehicles.Text = "Customer Vehicles";
+            this.toolStripCustomerVehicles.Click += new System.EventHandler(this.ToolStripCustomerVehicles_Click);
             // 
             // toolStripSeparator4
             // 
@@ -170,10 +174,11 @@
             // toolStripBtnNewCustomer
             // 
             this.toolStripBtnNewCustomer.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripBtnNewCustomer.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripBtnNewCustomer.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnNewCustomer.Image")));
             this.toolStripBtnNewCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnNewCustomer.Name = "toolStripBtnNewCustomer";
-            this.toolStripBtnNewCustomer.Size = new System.Drawing.Size(118, 32);
+            this.toolStripBtnNewCustomer.Size = new System.Drawing.Size(156, 32);
             this.toolStripBtnNewCustomer.Text = "New Customer";
             this.toolStripBtnNewCustomer.Click += new System.EventHandler(this.toolStripBtnNewCustomer_Click);
             // 
@@ -192,13 +197,13 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.customersDataGridView.DataSource = this.customersBindingSource;
-            this.customersDataGridView.Location = new System.Drawing.Point(12, 63);
+            this.customersDataGridView.Location = new System.Drawing.Point(12, 64);
             this.customersDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.customersDataGridView.Name = "customersDataGridView";
             this.customersDataGridView.ReadOnly = true;
             this.customersDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.customersDataGridView.RowTemplate.Height = 31;
-            this.customersDataGridView.Size = new System.Drawing.Size(1240, 608);
+            this.customersDataGridView.Size = new System.Drawing.Size(1240, 607);
             this.customersDataGridView.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn1
@@ -255,7 +260,7 @@
             // 
             this.txtSearchQuery.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchQuery.Location = new System.Drawing.Point(134, 36);
+            this.txtSearchQuery.Location = new System.Drawing.Point(134, 38);
             this.txtSearchQuery.Name = "txtSearchQuery";
             this.txtSearchQuery.Size = new System.Drawing.Size(989, 20);
             this.txtSearchQuery.TabIndex = 11;
@@ -265,7 +270,7 @@
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(1129, 34);
+            this.btnSearch.Location = new System.Drawing.Point(1129, 36);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(123, 23);
             this.btnSearch.TabIndex = 12;

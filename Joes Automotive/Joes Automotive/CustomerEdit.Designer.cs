@@ -65,7 +65,7 @@
             // 
             nameLabel.AutoSize = true;
             nameLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nameLabel.Location = new System.Drawing.Point(102, 56);
+            nameLabel.Location = new System.Drawing.Point(88, 38);
             nameLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(72, 25);
@@ -76,7 +76,7 @@
             // 
             addressLabel.AutoSize = true;
             addressLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            addressLabel.Location = new System.Drawing.Point(84, 94);
+            addressLabel.Location = new System.Drawing.Point(70, 76);
             addressLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             addressLabel.Name = "addressLabel";
             addressLabel.Size = new System.Drawing.Size(90, 25);
@@ -87,7 +87,7 @@
             // 
             phone_numberLabel.AutoSize = true;
             phone_numberLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            phone_numberLabel.Location = new System.Drawing.Point(17, 132);
+            phone_numberLabel.Location = new System.Drawing.Point(3, 114);
             phone_numberLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             phone_numberLabel.Name = "phone_numberLabel";
             phone_numberLabel.Size = new System.Drawing.Size(157, 25);
@@ -98,7 +98,7 @@
             // 
             email_addressLabel.AutoSize = true;
             email_addressLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            email_addressLabel.Location = new System.Drawing.Point(29, 170);
+            email_addressLabel.Location = new System.Drawing.Point(15, 152);
             email_addressLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             email_addressLabel.Name = "email_addressLabel";
             email_addressLabel.Size = new System.Drawing.Size(145, 25);
@@ -109,7 +109,7 @@
             // 
             notesLabel.AutoSize = true;
             notesLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            notesLabel.Location = new System.Drawing.Point(17, 368);
+            notesLabel.Location = new System.Drawing.Point(13, 348);
             notesLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             notesLabel.Name = "notesLabel";
             notesLabel.Size = new System.Drawing.Size(66, 25);
@@ -186,47 +186,47 @@
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(184, 56);
+            this.nameTextBox.Location = new System.Drawing.Point(170, 38);
             this.nameTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(738, 28);
+            this.nameTextBox.Size = new System.Drawing.Size(752, 28);
             this.nameTextBox.TabIndex = 4;
             // 
             // addressTextBox
             // 
             this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "address", true));
-            this.addressTextBox.Location = new System.Drawing.Point(184, 94);
+            this.addressTextBox.Location = new System.Drawing.Point(170, 76);
             this.addressTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(738, 28);
+            this.addressTextBox.Size = new System.Drawing.Size(752, 28);
             this.addressTextBox.TabIndex = 6;
             // 
             // phone_numberTextBox
             // 
             this.phone_numberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "phone_number", true));
-            this.phone_numberTextBox.Location = new System.Drawing.Point(184, 132);
+            this.phone_numberTextBox.Location = new System.Drawing.Point(170, 114);
             this.phone_numberTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.phone_numberTextBox.Name = "phone_numberTextBox";
-            this.phone_numberTextBox.Size = new System.Drawing.Size(738, 28);
+            this.phone_numberTextBox.Size = new System.Drawing.Size(752, 28);
             this.phone_numberTextBox.TabIndex = 8;
             // 
             // email_addressTextBox
             // 
             this.email_addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "email_address", true));
-            this.email_addressTextBox.Location = new System.Drawing.Point(184, 170);
+            this.email_addressTextBox.Location = new System.Drawing.Point(170, 152);
             this.email_addressTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.email_addressTextBox.Name = "email_addressTextBox";
-            this.email_addressTextBox.Size = new System.Drawing.Size(738, 28);
+            this.email_addressTextBox.Size = new System.Drawing.Size(752, 28);
             this.email_addressTextBox.TabIndex = 10;
             // 
             // notesTextBox
             // 
             this.notesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "notes", true));
-            this.notesTextBox.Location = new System.Drawing.Point(22, 401);
+            this.notesTextBox.Location = new System.Drawing.Point(22, 381);
             this.notesTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.notesTextBox.Multiline = true;
             this.notesTextBox.Name = "notesTextBox";
-            this.notesTextBox.Size = new System.Drawing.Size(1228, 266);
+            this.notesTextBox.Size = new System.Drawing.Size(1228, 286);
             this.notesTextBox.TabIndex = 12;
             // 
             // customersTableAdapter
@@ -247,7 +247,7 @@
             this.pictureBox1.BackgroundImage = global::Joes_Automotive.Properties.Resources.avatar;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(930, 56);
+            this.pictureBox1.Location = new System.Drawing.Point(932, 38);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(320, 293);
             this.pictureBox1.TabIndex = 13;
@@ -255,7 +255,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(930, 355);
+            this.button1.Location = new System.Drawing.Point(930, 337);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(320, 36);
             this.button1.TabIndex = 14;

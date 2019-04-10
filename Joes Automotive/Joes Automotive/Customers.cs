@@ -136,5 +136,24 @@ namespace Joes_Automotive
 
             }
         }
+
+        private void ToolStripCustomerVehicles_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int customerID = int.Parse(customersDataGridView.CurrentRow.Cells[0].Value.ToString());
+
+                CustomerVehicles customerVehcicles = new CustomerVehicles(customerID);
+                customerVehcicles.ShowDialog();
+                customersTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Customers);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was a problem editing the customer. Please try again later.\n \n \n \n \n \n " +
+                    "Error message: \n" +
+                    ex.Message);
+            }
+        }
     }
 }
