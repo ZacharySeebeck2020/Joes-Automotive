@@ -23,7 +23,7 @@ namespace Joes_Automotive
         {
             // customersTableAdapter.InsertNewCustomer(nameTextBox.Text, addressTextBox.Text, phone_numberTextBox.Text, email_addressTextBox.Text, notesTextBox.Text);
 
-            vehiclesTableAdapter.InsertNewVehicle(makeTextBox.Text, modelTextBox.Text, int.Parse(yearTextBox.Text), int.Parse(mileageTextBox.Text), date_receivedDateTimePicker.ToString(), date_returnedDateTimePicker.ToString(), ownerID, notesTextBox.Text);
+            vehiclesTableAdapter.InsertNewVehicle(makeTextBox.Text, modelTextBox.Text, int.Parse(yearTextBox.Text), int.Parse(mileageTextBox.Text), date_receivedDateTimePicker.Text, date_returnedDateTimePicker.Text, ownerID, notesTextBox.Text);
             this.Close();
         }
     }

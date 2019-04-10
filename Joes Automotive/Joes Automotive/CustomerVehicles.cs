@@ -30,8 +30,6 @@ namespace Joes_Automotive
         {
             try
             {
-                int vehicleID = int.Parse(vehiclesDataGridView.CurrentRow.Cells[0].Value.ToString());
-
                 VehicleCreate vehicleCreate = new VehicleCreate(customerID);
                 vehicleCreate.ShowDialog();
 
