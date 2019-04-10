@@ -18,5 +18,21 @@ namespace Joes_Automotive
             customerID = CustomerID;
             InitializeComponent();
         }
+
+        private void VehiclesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.vehiclesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.joesBigBoyDatabaseDataSet);
+
+        }
+
+        private void VehicleEdit_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'joesBigBoyDatabaseDataSet.Vehicles' table. You can move, or remove it, as needed.
+            this.vehiclesTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Vehicles);
+            
+
+        }
     }
 }
