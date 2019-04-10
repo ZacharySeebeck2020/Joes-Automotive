@@ -3697,7 +3697,7 @@ SELECT Id, make, model, year, mileage, date_received, date_returned, owner_id, n
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(JoesBigBoyDatabaseDataSet.VehiclesDataTable dataTable, int id) {
+        public virtual int FillByCustomerID(JoesBigBoyDatabaseDataSet.VehiclesDataTable dataTable, int id) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
             if ((this.ClearBeforeFill == true)) {
@@ -3705,18 +3705,6 @@ SELECT Id, make, model, year, mileage, date_received, date_returned, owner_id, n
             }
             int returnValue = this.Adapter.Fill(dataTable);
             return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual JoesBigBoyDatabaseDataSet.VehiclesDataTable GetDataBy(int id) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
-            JoesBigBoyDatabaseDataSet.VehiclesDataTable dataTable = new JoesBigBoyDatabaseDataSet.VehiclesDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

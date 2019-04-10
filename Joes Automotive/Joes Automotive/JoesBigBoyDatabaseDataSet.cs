@@ -10,9 +10,12 @@
     }
 }
 
-namespace Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters {
-    
-    
+namespace Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters
+{
+    partial class VehiclesTableAdapter
+    {
+    }
+
     public partial class CustomersTableAdapter {
     }
 }

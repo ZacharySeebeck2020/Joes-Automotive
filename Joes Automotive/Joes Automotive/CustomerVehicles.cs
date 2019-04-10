@@ -20,23 +20,35 @@ namespace Joes_Automotive
             this.customerID = customerID;
         }
 
-        private void vehiclesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.vehiclesBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.joesBigBoyDatabaseDataSet);
-
-        }
-
         private void CustomerVehicles_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'joesBigBoyDatabaseDataSet.Vehicles' table. You can move, or remove it, as needed.
-            this.vehiclesTableAdapter.FillBy(this.joesBigBoyDatabaseDataSet.Vehicles, this.customerID);
+            this.vehiclesTableAdapter.FillByCustomerID(this.joesBigBoyDatabaseDataSet.Vehicles, this.customerID);
         }
 
         private void toolStripBtnNewVehicle_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ToolStripBtnEditVehicle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int vehicleID = int.Parse(vehiclesDataGridView.CurrentRow.Cells[0].Value.ToString());
+
+                VehicleEdit vehicleEdit = new VehicleEdit(customerID);
+                vehicleEdit.ShowDialog();
+
+                vehiclesTableAdapter.FillByCustomerID(this.joesBigBoyDatabaseDataSet.Vehicles, customerID);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was a problem editing the vehicle. Please try again later.\n \n \n \n \n \n " +
+                    "Error message: \n" +
+                    ex.Message);
+            }
         }
     }
 }
