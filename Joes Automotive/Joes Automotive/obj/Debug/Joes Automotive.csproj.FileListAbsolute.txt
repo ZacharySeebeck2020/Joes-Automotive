@@ -76,3 +76,4 @@ C:\Users\Zachary Seebeck\Documents\Git\Joes-Automotive\Joes Automotive\Joes Auto
 C:\Users\Zachary Seebeck\Documents\GitHub\Joes-Automotive-The3rdFuckingTime\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.CustomerVehicles.resources
 C:\Users\Zachary Seebeck\Documents\Git\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.CustomerVehicles.resources
 C:\Users\Zachary Seebeck\Documents\Git\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.VehicleEdit.resources
+C:\Users\Zachary Seebeck\Documents\Git\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.VehicleCreate.resources

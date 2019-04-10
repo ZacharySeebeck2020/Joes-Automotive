@@ -17,13 +17,6 @@ namespace Joes_Automotive
             InitializeComponent();
         }
 
-        private void customersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.customersBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.joesBigBoyDatabaseDataSet);
-        }
-
         private void CustomerCreate_Load(object sender, EventArgs e)
         {
 

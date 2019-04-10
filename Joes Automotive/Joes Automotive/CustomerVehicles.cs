@@ -28,7 +28,22 @@ namespace Joes_Automotive
 
         private void toolStripBtnNewVehicle_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int vehicleID = int.Parse(vehiclesDataGridView.CurrentRow.Cells[0].Value.ToString());
 
+                VehicleCreate vehicleCreate = new VehicleCreate(customerID);
+                vehicleCreate.ShowDialog();
+
+                vehiclesTableAdapter.FillByCustomerID(this.joesBigBoyDatabaseDataSet.Vehicles, customerID);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was a problem creating the vehicle. Please try again later.\n \n \n \n \n \n " +
+                    "Error message: \n" +
+                    ex.Message);
+            }
         }
 
         private void ToolStripBtnEditVehicle_Click(object sender, EventArgs e)
