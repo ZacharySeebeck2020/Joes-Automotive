@@ -29,10 +29,17 @@ namespace Joes_Automotive
 
         private void ToolStripBtnSaveExit_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.vehiclesBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.joesBigBoyDatabaseDataSet);
-            this.Close();
+            try
+            {
+                this.Validate();
+                this.vehiclesBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.joesBigBoyDatabaseDataSet);
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error has occured. \n\n\n\n\n\n\n\n\n\n " + ex.Message);
+            }
         }
     }
 }
