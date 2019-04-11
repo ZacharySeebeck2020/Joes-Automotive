@@ -44,7 +44,7 @@ namespace Joes_Automotive
             }
             catch (Exception ex)
             {
-                MessageBox.Show("There was a problem editing the customer. Please try again later.\n \n \n \n \n \n " +
+                MessageBox.Show("There was a problem editing the vehicle. Please try again later.\n \n \n \n \n \n " +
                     "Error message: \n" +
                     ex.Message);
             }
