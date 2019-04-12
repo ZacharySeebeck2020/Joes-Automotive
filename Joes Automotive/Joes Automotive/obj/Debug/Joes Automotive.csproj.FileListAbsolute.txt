@@ -99,3 +99,4 @@ C:\Users\Zachary Seebeck\Documents\Gitkraken\Joes-Automotive\Joes Automotive\Joe
 C:\Users\Zachary Seebeck\Documents\Gitkraken\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes Automotive.csproj.CoreCompileInputs.cache
 C:\Users\Zachary Seebeck\Documents\Gitkraken\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes Automotive.exe
 C:\Users\Zachary Seebeck\Documents\Gitkraken\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes Automotive.pdb
+C:\Users\Zachary Seebeck\Documents\Git\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.Parts.resources

@@ -303,6 +303,7 @@
             this.Controls.Add(this.customersBindingNavigator);
             this.Name = "Customers";
             this.Text = " All Customers";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Customers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingNavigator)).EndInit();
             this.customersBindingNavigator.ResumeLayout(false);

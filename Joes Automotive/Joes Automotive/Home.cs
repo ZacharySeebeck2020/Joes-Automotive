@@ -40,7 +40,10 @@ namespace Joes_Automotive
 
         private void btnParts_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This screen has not been implemented yet.");
+            Parts parts = new Parts();
+            this.Hide();
+            parts.ShowDialog();
+            this.Show();
         }
 
         private void btnInvoices_Click(object sender, EventArgs e)

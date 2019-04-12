@@ -16,6 +16,10 @@
 
 namespace Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters
 {
+    partial class PartsTableAdapter
+    {
+    }
+
     partial class VehiclesTableAdapter
     {
     }
