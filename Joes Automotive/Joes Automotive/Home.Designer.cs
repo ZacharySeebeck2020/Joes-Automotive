@@ -35,12 +35,12 @@ namespace Joes_Automotive
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.lblTitle = new System.Windows.Forms.Label();
             this.customersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripBtnNewCustomer = new System.Windows.Forms.ToolStripButton();
             this.lblTagline = new System.Windows.Forms.Label();
             this.btnVehicles = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
             this.btnInvoices = new System.Windows.Forms.Button();
             this.btnParts = new System.Windows.Forms.Button();
-            this.toolStripBtnNewCustomer = new System.Windows.Forms.ToolStripButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingNavigator)).BeginInit();
             this.customersBindingNavigator.SuspendLayout();
@@ -78,6 +78,16 @@ namespace Joes_Automotive
             this.customersBindingNavigator.Size = new System.Drawing.Size(1264, 35);
             this.customersBindingNavigator.TabIndex = 10;
             this.customersBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // toolStripBtnNewCustomer
+            // 
+            this.toolStripBtnNewCustomer.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripBtnNewCustomer.Enabled = false;
+            this.toolStripBtnNewCustomer.Image = global::Joes_Automotive.Properties.Resources.save;
+            this.toolStripBtnNewCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnNewCustomer.Name = "toolStripBtnNewCustomer";
+            this.toolStripBtnNewCustomer.Size = new System.Drawing.Size(112, 32);
+            this.toolStripBtnNewCustomer.Text = "Save Changes";
             // 
             // lblTagline
             // 
@@ -149,16 +159,6 @@ namespace Joes_Automotive
             this.btnParts.UseVisualStyleBackColor = true;
             this.btnParts.Click += new System.EventHandler(this.btnParts_Click);
             // 
-            // toolStripBtnNewCustomer
-            // 
-            this.toolStripBtnNewCustomer.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripBtnNewCustomer.Enabled = false;
-            this.toolStripBtnNewCustomer.Image = global::Joes_Automotive.Properties.Resources.save;
-            this.toolStripBtnNewCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnNewCustomer.Name = "toolStripBtnNewCustomer";
-            this.toolStripBtnNewCustomer.Size = new System.Drawing.Size(112, 32);
-            this.toolStripBtnNewCustomer.Text = "Save Changes";
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -187,6 +187,7 @@ namespace Joes_Automotive
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "Home";
+            this.ShowIcon = false;
             this.Text = "Joe\'s Automotive - Home";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingNavigator)).EndInit();

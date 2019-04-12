@@ -157,6 +157,8 @@
             // 
             // makeTextBox
             // 
+            this.makeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.makeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiclesBindingSource, "make", true));
             this.makeTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F);
             this.makeTextBox.Location = new System.Drawing.Point(167, 41);
@@ -166,6 +168,8 @@
             // 
             // modelTextBox
             // 
+            this.modelTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.modelTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiclesBindingSource, "model", true));
             this.modelTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F);
             this.modelTextBox.Location = new System.Drawing.Point(167, 78);
@@ -175,6 +179,8 @@
             // 
             // yearTextBox
             // 
+            this.yearTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.yearTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiclesBindingSource, "year", true));
             this.yearTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F);
             this.yearTextBox.Location = new System.Drawing.Point(167, 115);
@@ -184,6 +190,8 @@
             // 
             // mileageTextBox
             // 
+            this.mileageTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mileageTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiclesBindingSource, "mileage", true));
             this.mileageTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F);
             this.mileageTextBox.Location = new System.Drawing.Point(167, 152);
@@ -193,6 +201,8 @@
             // 
             // date_receivedDateTimePicker
             // 
+            this.date_receivedDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.date_receivedDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vehiclesBindingSource, "date_received", true));
             this.date_receivedDateTimePicker.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F);
             this.date_receivedDateTimePicker.Location = new System.Drawing.Point(167, 189);
@@ -202,6 +212,8 @@
             // 
             // date_returnedDateTimePicker
             // 
+            this.date_returnedDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.date_returnedDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.vehiclesBindingSource, "date_returned", true));
             this.date_returnedDateTimePicker.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F);
             this.date_returnedDateTimePicker.Location = new System.Drawing.Point(167, 226);
@@ -211,6 +223,9 @@
             // 
             // notesTextBox
             // 
+            this.notesTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.notesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.vehiclesBindingSource, "notes", true));
             this.notesTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.notesTextBox.Location = new System.Drawing.Point(12, 403);
@@ -271,8 +286,11 @@
             this.Controls.Add(this.date_returnedDateTimePicker);
             this.Controls.Add(notesLabel);
             this.Controls.Add(this.notesTextBox);
+            this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "VehicleEdit";
-            this.Text = "VehicleEdit";
+            this.ShowIcon = false;
+            this.Text = "Edit Vehicle";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.VehicleEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.joesBigBoyDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiclesBindingSource)).EndInit();

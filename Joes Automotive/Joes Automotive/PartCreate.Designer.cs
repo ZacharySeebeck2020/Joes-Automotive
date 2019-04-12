@@ -57,6 +57,66 @@
             this.customersBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.Location = new System.Drawing.Point(98, 41);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(93, 25);
+            idLabel.TabIndex = 23;
+            idLabel.Text = "Stock ID:";
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nameLabel.Location = new System.Drawing.Point(76, 79);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(115, 25);
+            nameLabel.TabIndex = 25;
+            nameLabel.Text = "Part Name:";
+            // 
+            // costLabel
+            // 
+            costLabel.AutoSize = true;
+            costLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            costLabel.Location = new System.Drawing.Point(54, 117);
+            costLabel.Name = "costLabel";
+            costLabel.Size = new System.Drawing.Size(137, 25);
+            costLabel.TabIndex = 27;
+            costLabel.Text = "Cost Per Part:";
+            // 
+            // number_in_stockLabel
+            // 
+            number_in_stockLabel.AutoSize = true;
+            number_in_stockLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            number_in_stockLabel.Location = new System.Drawing.Point(19, 155);
+            number_in_stockLabel.Name = "number_in_stockLabel";
+            number_in_stockLabel.Size = new System.Drawing.Size(172, 25);
+            number_in_stockLabel.TabIndex = 29;
+            number_in_stockLabel.Text = "Number In Stock:";
+            // 
+            // number_on_orderLabel
+            // 
+            number_on_orderLabel.AutoSize = true;
+            number_on_orderLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            number_on_orderLabel.Location = new System.Drawing.Point(8, 193);
+            number_on_orderLabel.Name = "number_on_orderLabel";
+            number_on_orderLabel.Size = new System.Drawing.Size(183, 25);
+            number_on_orderLabel.TabIndex = 31;
+            number_on_orderLabel.Text = "Number On Order:";
+            // 
+            // part_forLabel
+            // 
+            part_forLabel.AutoSize = true;
+            part_forLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            part_forLabel.Location = new System.Drawing.Point(16, 231);
+            part_forLabel.Name = "part_forLabel";
+            part_forLabel.Size = new System.Drawing.Size(175, 25);
+            part_forLabel.TabIndex = 33;
+            part_forLabel.Text = "Model Part Is For:";
+            // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -111,16 +171,6 @@
             this.toolStripBtnCreate.Text = "Save New Part";
             this.toolStripBtnCreate.Click += new System.EventHandler(this.ToolStripBtnCreate_Click);
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(98, 41);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(93, 25);
-            idLabel.TabIndex = 23;
-            idLabel.Text = "Stock ID:";
-            // 
             // idTextBox
             // 
             this.idTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -130,16 +180,6 @@
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(725, 32);
             this.idTextBox.TabIndex = 24;
-            // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nameLabel.Location = new System.Drawing.Point(76, 79);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(115, 25);
-            nameLabel.TabIndex = 25;
-            nameLabel.Text = "Part Name:";
             // 
             // nameTextBox
             // 
@@ -151,16 +191,6 @@
             this.nameTextBox.Size = new System.Drawing.Size(725, 32);
             this.nameTextBox.TabIndex = 26;
             // 
-            // costLabel
-            // 
-            costLabel.AutoSize = true;
-            costLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            costLabel.Location = new System.Drawing.Point(54, 117);
-            costLabel.Name = "costLabel";
-            costLabel.Size = new System.Drawing.Size(137, 25);
-            costLabel.TabIndex = 27;
-            costLabel.Text = "Cost Per Part:";
-            // 
             // costTextBox
             // 
             this.costTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -170,16 +200,6 @@
             this.costTextBox.Name = "costTextBox";
             this.costTextBox.Size = new System.Drawing.Size(725, 32);
             this.costTextBox.TabIndex = 28;
-            // 
-            // number_in_stockLabel
-            // 
-            number_in_stockLabel.AutoSize = true;
-            number_in_stockLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            number_in_stockLabel.Location = new System.Drawing.Point(19, 155);
-            number_in_stockLabel.Name = "number_in_stockLabel";
-            number_in_stockLabel.Size = new System.Drawing.Size(172, 25);
-            number_in_stockLabel.TabIndex = 29;
-            number_in_stockLabel.Text = "Number In Stock:";
             // 
             // number_in_stockTextBox
             // 
@@ -191,16 +211,6 @@
             this.number_in_stockTextBox.Size = new System.Drawing.Size(725, 32);
             this.number_in_stockTextBox.TabIndex = 30;
             // 
-            // number_on_orderLabel
-            // 
-            number_on_orderLabel.AutoSize = true;
-            number_on_orderLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            number_on_orderLabel.Location = new System.Drawing.Point(8, 193);
-            number_on_orderLabel.Name = "number_on_orderLabel";
-            number_on_orderLabel.Size = new System.Drawing.Size(183, 25);
-            number_on_orderLabel.TabIndex = 31;
-            number_on_orderLabel.Text = "Number On Order:";
-            // 
             // number_on_orderTextBox
             // 
             this.number_on_orderTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -210,16 +220,6 @@
             this.number_on_orderTextBox.Name = "number_on_orderTextBox";
             this.number_on_orderTextBox.Size = new System.Drawing.Size(725, 32);
             this.number_on_orderTextBox.TabIndex = 32;
-            // 
-            // part_forLabel
-            // 
-            part_forLabel.AutoSize = true;
-            part_forLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            part_forLabel.Location = new System.Drawing.Point(16, 231);
-            part_forLabel.Name = "part_forLabel";
-            part_forLabel.Size = new System.Drawing.Size(175, 25);
-            part_forLabel.TabIndex = 33;
-            part_forLabel.Text = "Model Part Is For:";
             // 
             // part_forTextBox
             // 
@@ -257,6 +257,7 @@
             this.Controls.Add(this.part_forTextBox);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "PartCreate";
+            this.ShowIcon = false;
             this.Text = "Create a New Part";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

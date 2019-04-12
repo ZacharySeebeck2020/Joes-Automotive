@@ -301,7 +301,9 @@
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.customersDataGridView);
             this.Controls.Add(this.customersBindingNavigator);
+            this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "Customers";
+            this.ShowIcon = false;
             this.Text = " All Customers";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Customers_Load);

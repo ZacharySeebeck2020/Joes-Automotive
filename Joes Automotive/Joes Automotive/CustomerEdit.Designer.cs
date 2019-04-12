@@ -185,6 +185,8 @@
             // 
             // nameTextBox
             // 
+            this.nameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "name", true));
             this.nameTextBox.Location = new System.Drawing.Point(170, 38);
             this.nameTextBox.Margin = new System.Windows.Forms.Padding(5);
@@ -194,6 +196,8 @@
             // 
             // addressTextBox
             // 
+            this.addressTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "address", true));
             this.addressTextBox.Location = new System.Drawing.Point(170, 76);
             this.addressTextBox.Margin = new System.Windows.Forms.Padding(5);
@@ -203,6 +207,8 @@
             // 
             // phone_numberTextBox
             // 
+            this.phone_numberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.phone_numberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "phone_number", true));
             this.phone_numberTextBox.Location = new System.Drawing.Point(170, 114);
             this.phone_numberTextBox.Margin = new System.Windows.Forms.Padding(5);
@@ -212,6 +218,8 @@
             // 
             // email_addressTextBox
             // 
+            this.email_addressTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.email_addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "email_address", true));
             this.email_addressTextBox.Location = new System.Drawing.Point(170, 152);
             this.email_addressTextBox.Margin = new System.Windows.Forms.Padding(5);
@@ -221,6 +229,9 @@
             // 
             // notesTextBox
             // 
+            this.notesTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.notesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "notes", true));
             this.notesTextBox.Location = new System.Drawing.Point(22, 381);
             this.notesTextBox.Margin = new System.Windows.Forms.Padding(5);
@@ -244,6 +255,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = global::Joes_Automotive.Properties.Resources.avatar;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -255,6 +267,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Location = new System.Drawing.Point(930, 337);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(320, 36);
@@ -283,8 +296,11 @@
             this.Controls.Add(this.customersBindingNavigator);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "CustomerEdit";
-            this.Text = "CustomerEdit";
+            this.ShowIcon = false;
+            this.Text = "Edit Customer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CustomerEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingNavigator)).EndInit();
             this.customersBindingNavigator.ResumeLayout(false);

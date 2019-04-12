@@ -287,7 +287,8 @@
             this.Controls.Add(this.part_forTextBox);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "PartEdit";
-            this.Text = "PartEdit";
+            this.ShowIcon = false;
+            this.Text = "Edit A Part";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PartEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.joesBigBoyDatabaseDataSet)).EndInit();

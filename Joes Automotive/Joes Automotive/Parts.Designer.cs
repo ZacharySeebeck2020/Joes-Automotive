@@ -30,14 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.partsDataGridView = new System.Windows.Forms.DataGridView();
-            this.customersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtSearchQuery = new System.Windows.Forms.TextBox();
-            this.lblSearch = new System.Windows.Forms.Label();
-            this.toolStripBtnDeletePart = new System.Windows.Forms.ToolStripButton();
-            this.customersBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtnEditPart = new System.Windows.Forms.ToolStripButton();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,15 +38,23 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.partsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.joesBigBoyDatabaseDataSet = new Joes_Automotive.JoesBigBoyDatabaseDataSet();
-            this.partsTableAdapter = new Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters.PartsTableAdapter();
-            this.tableAdapterManager = new Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters.TableAdapterManager();
+            this.customersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripBtnDeletePart = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.customersBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripBtnEditPart = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBtnNewPart = new System.Windows.Forms.ToolStripButton();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearchQuery = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.partsTableAdapter = new Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters.PartsTableAdapter();
+            this.tableAdapterManager = new Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.partsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersBindingNavigator)).BeginInit();
-            this.customersBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.partsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.joesBigBoyDatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingNavigator)).BeginInit();
+            this.customersBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // partsDataGridView
@@ -80,92 +80,6 @@
             this.partsDataGridView.Size = new System.Drawing.Size(1240, 604);
             this.partsDataGridView.TabIndex = 1;
             // 
-            // customersBindingNavigator
-            // 
-            this.customersBindingNavigator.AddNewItem = null;
-            this.customersBindingNavigator.CountItem = null;
-            this.customersBindingNavigator.DeleteItem = null;
-            this.customersBindingNavigator.ImageScalingSize = new System.Drawing.Size(28, 28);
-            this.customersBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripBtnDeletePart,
-            this.toolStripSeparator1,
-            this.customersBindingNavigatorSaveItem,
-            this.toolStripBtnEditPart,
-            this.toolStripSeparator2,
-            this.toolStripBtnNewPart});
-            this.customersBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.customersBindingNavigator.MoveFirstItem = null;
-            this.customersBindingNavigator.MoveLastItem = null;
-            this.customersBindingNavigator.MoveNextItem = null;
-            this.customersBindingNavigator.MovePreviousItem = null;
-            this.customersBindingNavigator.Name = "customersBindingNavigator";
-            this.customersBindingNavigator.PositionItem = null;
-            this.customersBindingNavigator.Size = new System.Drawing.Size(1264, 35);
-            this.customersBindingNavigator.TabIndex = 11;
-            this.customersBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 35);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(1127, 36);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(123, 23);
-            this.btnSearch.TabIndex = 15;
-            this.btnSearch.Text = "&Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // txtSearchQuery
-            // 
-            this.txtSearchQuery.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchQuery.Location = new System.Drawing.Point(168, 38);
-            this.txtSearchQuery.Name = "txtSearchQuery";
-            this.txtSearchQuery.Size = new System.Drawing.Size(953, 20);
-            this.txtSearchQuery.TabIndex = 14;
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(10, 35);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(152, 21);
-            this.lblSearch.TabIndex = 13;
-            this.lblSearch.Text = "Search Part Name:";
-            // 
-            // toolStripBtnDeletePart
-            // 
-            this.toolStripBtnDeletePart.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripBtnDeletePart.Image = global::Joes_Automotive.Properties.Resources.garbage;
-            this.toolStripBtnDeletePart.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnDeletePart.Name = "toolStripBtnDeletePart";
-            this.toolStripBtnDeletePart.Size = new System.Drawing.Size(196, 32);
-            this.toolStripBtnDeletePart.Text = "Delete Selected Part";
-            // 
-            // customersBindingNavigatorSaveItem
-            // 
-            this.customersBindingNavigatorSaveItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.customersBindingNavigatorSaveItem.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customersBindingNavigatorSaveItem.Image = global::Joes_Automotive.Properties.Resources.save;
-            this.customersBindingNavigatorSaveItem.Name = "customersBindingNavigatorSaveItem";
-            this.customersBindingNavigatorSaveItem.Size = new System.Drawing.Size(148, 32);
-            this.customersBindingNavigatorSaveItem.Text = "Save Changes";
-            // 
-            // toolStripBtnEditPart
-            // 
-            this.toolStripBtnEditPart.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripBtnEditPart.Image = global::Joes_Automotive.Properties.Resources.tools;
-            this.toolStripBtnEditPart.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtnEditPart.Name = "toolStripBtnEditPart";
-            this.toolStripBtnEditPart.Size = new System.Drawing.Size(107, 32);
-            this.toolStripBtnEditPart.Text = "Edit Part";
-            this.toolStripBtnEditPart.Click += new System.EventHandler(this.ToolStripBtnEditPart_Click);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -173,7 +87,7 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "Stock ID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 74;
+            this.dataGridViewTextBoxColumn1.Width = 69;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -225,18 +139,62 @@
             this.joesBigBoyDatabaseDataSet.DataSetName = "JoesBigBoyDatabaseDataSet";
             this.joesBigBoyDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // partsTableAdapter
+            // customersBindingNavigator
             // 
-            this.partsTableAdapter.ClearBeforeFill = true;
+            this.customersBindingNavigator.AddNewItem = null;
+            this.customersBindingNavigator.CountItem = null;
+            this.customersBindingNavigator.DeleteItem = null;
+            this.customersBindingNavigator.ImageScalingSize = new System.Drawing.Size(28, 28);
+            this.customersBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripBtnDeletePart,
+            this.toolStripSeparator1,
+            this.customersBindingNavigatorSaveItem,
+            this.toolStripBtnEditPart,
+            this.toolStripSeparator2,
+            this.toolStripBtnNewPart});
+            this.customersBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.customersBindingNavigator.MoveFirstItem = null;
+            this.customersBindingNavigator.MoveLastItem = null;
+            this.customersBindingNavigator.MoveNextItem = null;
+            this.customersBindingNavigator.MovePreviousItem = null;
+            this.customersBindingNavigator.Name = "customersBindingNavigator";
+            this.customersBindingNavigator.PositionItem = null;
+            this.customersBindingNavigator.Size = new System.Drawing.Size(1264, 35);
+            this.customersBindingNavigator.TabIndex = 11;
+            this.customersBindingNavigator.Text = "bindingNavigator1";
             // 
-            // tableAdapterManager
+            // toolStripBtnDeletePart
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CustomersTableAdapter = null;
-            this.tableAdapterManager.InvoicesTableAdapter = null;
-            this.tableAdapterManager.PartsTableAdapter = this.partsTableAdapter;
-            this.tableAdapterManager.UpdateOrder = Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.VehiclesTableAdapter = null;
+            this.toolStripBtnDeletePart.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripBtnDeletePart.Image = global::Joes_Automotive.Properties.Resources.garbage;
+            this.toolStripBtnDeletePart.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnDeletePart.Name = "toolStripBtnDeletePart";
+            this.toolStripBtnDeletePart.Size = new System.Drawing.Size(196, 32);
+            this.toolStripBtnDeletePart.Text = "Delete Selected Part";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 35);
+            // 
+            // customersBindingNavigatorSaveItem
+            // 
+            this.customersBindingNavigatorSaveItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.customersBindingNavigatorSaveItem.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customersBindingNavigatorSaveItem.Image = global::Joes_Automotive.Properties.Resources.save;
+            this.customersBindingNavigatorSaveItem.Name = "customersBindingNavigatorSaveItem";
+            this.customersBindingNavigatorSaveItem.Size = new System.Drawing.Size(148, 32);
+            this.customersBindingNavigatorSaveItem.Text = "Save Changes";
+            // 
+            // toolStripBtnEditPart
+            // 
+            this.toolStripBtnEditPart.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripBtnEditPart.Image = global::Joes_Automotive.Properties.Resources.tools;
+            this.toolStripBtnEditPart.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripBtnEditPart.Name = "toolStripBtnEditPart";
+            this.toolStripBtnEditPart.Size = new System.Drawing.Size(107, 32);
+            this.toolStripBtnEditPart.Text = "Edit Part";
+            this.toolStripBtnEditPart.Click += new System.EventHandler(this.ToolStripBtnEditPart_Click);
             // 
             // toolStripSeparator2
             // 
@@ -253,6 +211,48 @@
             this.toolStripBtnNewPart.Text = "Create a New Part";
             this.toolStripBtnNewPart.Click += new System.EventHandler(this.ToolStripBtnNewPart_Click);
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.Location = new System.Drawing.Point(1127, 36);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(123, 23);
+            this.btnSearch.TabIndex = 15;
+            this.btnSearch.Text = "&Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // txtSearchQuery
+            // 
+            this.txtSearchQuery.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearchQuery.Location = new System.Drawing.Point(168, 38);
+            this.txtSearchQuery.Name = "txtSearchQuery";
+            this.txtSearchQuery.Size = new System.Drawing.Size(953, 20);
+            this.txtSearchQuery.TabIndex = 14;
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.Location = new System.Drawing.Point(10, 35);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(152, 21);
+            this.lblSearch.TabIndex = 13;
+            this.lblSearch.Text = "Search Part Name:";
+            // 
+            // partsTableAdapter
+            // 
+            this.partsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CustomersTableAdapter = null;
+            this.tableAdapterManager.InvoicesTableAdapter = null;
+            this.tableAdapterManager.PartsTableAdapter = this.partsTableAdapter;
+            this.tableAdapterManager.UpdateOrder = Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.VehiclesTableAdapter = null;
+            // 
             // Parts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,15 +265,16 @@
             this.Controls.Add(this.partsDataGridView);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "Parts";
-            this.Text = "Parts";
+            this.ShowIcon = false;
+            this.Text = "All Parts";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Parts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.partsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.joesBigBoyDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingNavigator)).EndInit();
             this.customersBindingNavigator.ResumeLayout(false);
             this.customersBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.partsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.joesBigBoyDatabaseDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

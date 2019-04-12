@@ -305,7 +305,8 @@
             this.Controls.Add(this.customersBindingNavigator);
             this.Controls.Add(this.vehiclesDataGridView);
             this.Name = "Vehicles";
-            this.Text = "Vehicles";
+            this.ShowIcon = false;
+            this.Text = "All Vehicles";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Vehicles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.joesBigBoyDatabaseDataSet)).EndInit();

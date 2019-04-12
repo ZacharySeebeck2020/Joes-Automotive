@@ -40,13 +40,13 @@
             this.tableAdapterManager = new Joes_Automotive.JoesBigBoyDatabaseDataSetTableAdapters.TableAdapterManager();
             this.customersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripBtnCreateExit = new System.Windows.Forms.ToolStripButton();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.addressTextBox = new System.Windows.Forms.TextBox();
-            this.phone_numberTextBox = new System.Windows.Forms.TextBox();
-            this.email_addressTextBox = new System.Windows.Forms.TextBox();
             this.notesTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.email_addressTextBox = new System.Windows.Forms.TextBox();
+            this.phone_numberTextBox = new System.Windows.Forms.TextBox();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
             nameLabel = new System.Windows.Forms.Label();
             addressLabel = new System.Windows.Forms.Label();
             phone_numberLabel = new System.Windows.Forms.Label();
@@ -163,42 +163,6 @@
             this.toolStripBtnCreateExit.Text = "Create Customer";
             this.toolStripBtnCreateExit.Click += new System.EventHandler(this.toolStripBtnCreateExit_Click);
             // 
-            // nameTextBox
-            // 
-            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "name", true));
-            this.nameTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F);
-            this.nameTextBox.Location = new System.Drawing.Point(157, 38);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(769, 31);
-            this.nameTextBox.TabIndex = 14;
-            // 
-            // addressTextBox
-            // 
-            this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "address", true));
-            this.addressTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F);
-            this.addressTextBox.Location = new System.Drawing.Point(157, 75);
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(769, 31);
-            this.addressTextBox.TabIndex = 16;
-            // 
-            // phone_numberTextBox
-            // 
-            this.phone_numberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "phone_number", true));
-            this.phone_numberTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F);
-            this.phone_numberTextBox.Location = new System.Drawing.Point(157, 112);
-            this.phone_numberTextBox.Name = "phone_numberTextBox";
-            this.phone_numberTextBox.Size = new System.Drawing.Size(769, 31);
-            this.phone_numberTextBox.TabIndex = 18;
-            // 
-            // email_addressTextBox
-            // 
-            this.email_addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "email_address", true));
-            this.email_addressTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F);
-            this.email_addressTextBox.Location = new System.Drawing.Point(157, 149);
-            this.email_addressTextBox.Name = "email_addressTextBox";
-            this.email_addressTextBox.Size = new System.Drawing.Size(769, 31);
-            this.email_addressTextBox.TabIndex = 20;
-            // 
             // notesTextBox
             // 
             this.notesTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -213,6 +177,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12.25F);
             this.button1.Location = new System.Drawing.Point(932, 337);
             this.button1.Name = "button1";
@@ -223,6 +188,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = global::Joes_Automotive.Properties.Resources.avatar;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -231,6 +197,50 @@
             this.pictureBox1.Size = new System.Drawing.Size(320, 293);
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
+            // 
+            // email_addressTextBox
+            // 
+            this.email_addressTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.email_addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "email_address", true));
+            this.email_addressTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F);
+            this.email_addressTextBox.Location = new System.Drawing.Point(157, 149);
+            this.email_addressTextBox.Name = "email_addressTextBox";
+            this.email_addressTextBox.Size = new System.Drawing.Size(769, 31);
+            this.email_addressTextBox.TabIndex = 20;
+            // 
+            // phone_numberTextBox
+            // 
+            this.phone_numberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.phone_numberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "phone_number", true));
+            this.phone_numberTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F);
+            this.phone_numberTextBox.Location = new System.Drawing.Point(157, 112);
+            this.phone_numberTextBox.Name = "phone_numberTextBox";
+            this.phone_numberTextBox.Size = new System.Drawing.Size(769, 31);
+            this.phone_numberTextBox.TabIndex = 18;
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "address", true));
+            this.addressTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F);
+            this.addressTextBox.Location = new System.Drawing.Point(157, 75);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(769, 31);
+            this.addressTextBox.TabIndex = 16;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customersBindingSource, "name", true));
+            this.nameTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F);
+            this.nameTextBox.Location = new System.Drawing.Point(157, 38);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(769, 31);
+            this.nameTextBox.TabIndex = 14;
             // 
             // CustomerCreate
             // 
@@ -252,7 +262,9 @@
             this.Controls.Add(this.customersBindingNavigator);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CustomerCreate";
-            this.Text = "CustomerCreate";
+            this.ShowIcon = false;
+            this.Text = "Create A New Customer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CustomerCreate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.joesBigBoyDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
@@ -273,12 +285,12 @@
         private JoesBigBoyDatabaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator customersBindingNavigator;
         private System.Windows.Forms.ToolStripButton toolStripBtnCreateExit;
-        private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.TextBox addressTextBox;
-        private System.Windows.Forms.TextBox phone_numberTextBox;
-        private System.Windows.Forms.TextBox email_addressTextBox;
         private System.Windows.Forms.TextBox notesTextBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox email_addressTextBox;
+        private System.Windows.Forms.TextBox phone_numberTextBox;
+        private System.Windows.Forms.TextBox addressTextBox;
+        private System.Windows.Forms.TextBox nameTextBox;
     }
 }
