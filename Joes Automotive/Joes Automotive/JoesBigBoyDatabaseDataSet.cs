@@ -4,6 +4,10 @@
 
     partial class JoesBigBoyDatabaseDataSet
     {
+        partial class PartsDataTable
+        {
+        }
+
         partial class VehiclesDataTable
         {
         }

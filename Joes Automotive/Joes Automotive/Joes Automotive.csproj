@@ -106,6 +106,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>JoesBigBoyDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PartCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartCreate.Designer.cs">
+      <DependentUpon>PartCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="PartEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartCreate.resx">
+      <DependentUpon>PartCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PartEdit.resx">
       <DependentUpon>PartEdit.cs</DependentUpon>

@@ -54,5 +54,41 @@ namespace Joes_Automotive
             this.tableAdapterManager.UpdateAll(this.joesBigBoyDatabaseDataSet);
 
         }
+
+        private void ToolStripBtnNewPart_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                PartCreate partCreate = new PartCreate();
+                this.Hide();
+                partCreate.ShowDialog();
+                this.Show();
+                this.partsTableAdapter.FillBy(this.joesBigBoyDatabaseDataSet.Parts);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("A problem has occured: \n\n\n\n\n\n\n\n" + ex.Message);
+            }
+        }
+
+        private void ToolStripBtnEditPart_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int partID = int.Parse(partsDataGridView.CurrentRow.Cells[0].Value.ToString());
+
+                PartEdit partEdit = new PartEdit(partID);
+                this.Hide();
+                partEdit.ShowDialog();
+                this.Show();
+                partsTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Parts);
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("A problem has occured: \n\n\n\n\n\n\n\n" + ex.Message);
+            }
+        }
     }
 }

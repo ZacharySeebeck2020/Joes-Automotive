@@ -12,30 +12,25 @@ namespace Joes_Automotive
 {
     public partial class PartEdit : Form
     {
-        public PartEdit()
+        int partID;
+
+        public PartEdit(int partID)
         {
+            this.partID = partID;
             InitializeComponent();
-        }
-
-        private void PartsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.partsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.joesBigBoyDatabaseDataSet);
-
         }
 
         private void PartEdit_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'joesBigBoyDatabaseDataSet.Parts' table. You can move, or remove it, as needed.
-            this.partsTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Parts);
-
+            this.partsTableAdapter.FillByPartID(this.joesBigBoyDatabaseDataSet.Parts, partID);
         }
 
         private void ToolStripBtnSaveExit_Click(object sender, EventArgs e)
         {
             // Implement Part Saving here.
-
+            this.Validate();
+            this.partsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.joesBigBoyDatabaseDataSet);
         }
     }
 }

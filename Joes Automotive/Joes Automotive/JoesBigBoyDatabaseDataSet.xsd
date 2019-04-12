@@ -245,7 +245,7 @@ SELECT Id, name, cost, number_in_stock, number_on_order, part_photo, part_for FR
               <Mapping SourceColumn="part_for" DataSetColumn="part_for" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="JoesBigBoyDatabaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeletePartByID" Modifier="Public" Name="DeletePartByID" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="DeletePartByID">
+              <DbSource ConnectionRef="JoesBigBoyDatabaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeletePartByID" Modifier="Public" Name="DeletePartByID" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeletePartByID">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[Parts] WHERE Id = @partID</CommandText>
@@ -255,7 +255,7 @@ SELECT Id, name, cost, number_in_stock, number_on_order, part_photo, part_for FR
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="JoesBigBoyDatabaseConnectionString (Settings)" DbObjectName="dbo.Parts" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+              <DbSource ConnectionRef="JoesBigBoyDatabaseConnectionString (Settings)" DbObjectName="dbo.Parts" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT * FROM dbo.Parts</CommandText>
@@ -263,7 +263,7 @@ SELECT Id, name, cost, number_in_stock, number_on_order, part_photo, part_for FR
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="JoesBigBoyDatabaseConnectionString (Settings)" DbObjectName="dbo.Parts" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByPartID" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByPartID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByPartID">
+              <DbSource ConnectionRef="JoesBigBoyDatabaseConnectionString (Settings)" DbObjectName="dbo.Parts" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByPartID" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillByPartID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillByPartID">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT * FROM dbo.Parts WHERE Id = @partID</CommandText>
@@ -272,6 +272,22 @@ SELECT Id, name, cost, number_in_stock, number_on_order, part_photo, part_for FR
                     </Parameters>
                   </DbCommand>
                 </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="JoesBigBoyDatabaseConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertNewPart" Modifier="Public" Name="InsertNewPart" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="InsertNewPart">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [dbo].[Parts] ([Id], [name], [cost], [number_in_stock], [number_on_order], [part_for]) VALUES (@Id, @name, @cost, @number_in_stock, @number_on_order, @part_for);
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[C:\USERS\ZACHARY SEEBECK\DOCUMENTS\GIT\JOES-AUTOMOTIVE\JOES AUTOMOTIVE\JOES AUTOMOTIVE\JOESBIGBOYDATABASE.MDF].dbo.Parts" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="name" ColumnName="name" DataSourceName="[C:\USERS\ZACHARY SEEBECK\DOCUMENTS\GIT\JOES-AUTOMOTIVE\JOES AUTOMOTIVE\JOES AUTOMOTIVE\JOESBIGBOYDATABASE.MDF].dbo.Parts" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@name" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="cost" ColumnName="cost" DataSourceName="[C:\USERS\ZACHARY SEEBECK\DOCUMENTS\GIT\JOES-AUTOMOTIVE\JOES AUTOMOTIVE\JOES AUTOMOTIVE\JOESBIGBOYDATABASE.MDF].dbo.Parts" DataTypeServer="money" DbType="Currency" Direction="Input" ParameterName="@cost" Precision="0" ProviderType="Money" Scale="0" Size="8" SourceColumn="cost" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="number_in_stock" ColumnName="number_in_stock" DataSourceName="[C:\USERS\ZACHARY SEEBECK\DOCUMENTS\GIT\JOES-AUTOMOTIVE\JOES AUTOMOTIVE\JOES AUTOMOTIVE\JOESBIGBOYDATABASE.MDF].dbo.Parts" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@number_in_stock" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="number_in_stock" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="number_on_order" ColumnName="number_on_order" DataSourceName="[C:\USERS\ZACHARY SEEBECK\DOCUMENTS\GIT\JOES-AUTOMOTIVE\JOES AUTOMOTIVE\JOES AUTOMOTIVE\JOESBIGBOYDATABASE.MDF].dbo.Parts" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@number_on_order" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="number_on_order" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="part_for" ColumnName="part_for" DataSourceName="[C:\USERS\ZACHARY SEEBECK\DOCUMENTS\GIT\JOES-AUTOMOTIVE\JOES AUTOMOTIVE\JOES AUTOMOTIVE\JOESBIGBOYDATABASE.MDF].dbo.Parts" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@part_for" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="part_for" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
               </DbSource>
             </Sources>
           </TableAdapter>
@@ -412,7 +428,7 @@ WHERE        (Id = @id)</CommandText>
   <xs:element name="JoesBigBoyDatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="JoesBigBoyDatabaseDataSet" msprop:Generator_UserDSName="JoesBigBoyDatabaseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Customers" msprop:Generator_TableClassName="CustomersDataTable" msprop:Generator_TableVarName="tableCustomers" msprop:Generator_TablePropName="Customers" msprop:Generator_RowDeletingName="CustomersRowDeleting" msprop:Generator_RowChangingName="CustomersRowChanging" msprop:Generator_RowEvHandlerName="CustomersRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomersRowDeleted" msprop:Generator_UserTableName="Customers" msprop:Generator_RowChangedName="CustomersRowChanged" msprop:Generator_RowEvArgName="CustomersRowChangeEvent" msprop:Generator_RowClassName="CustomersRow">
+        <xs:element name="Customers" msprop:Generator_TableClassName="CustomersDataTable" msprop:Generator_TableVarName="tableCustomers" msprop:Generator_RowChangedName="CustomersRowChanged" msprop:Generator_TablePropName="Customers" msprop:Generator_RowDeletingName="CustomersRowDeleting" msprop:Generator_RowChangingName="CustomersRowChanging" msprop:Generator_RowEvHandlerName="CustomersRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomersRowDeleted" msprop:Generator_RowClassName="CustomersRow" msprop:Generator_UserTableName="Customers" msprop:Generator_RowEvArgName="CustomersRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -454,7 +470,7 @@ WHERE        (Id = @id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Invoices" msprop:Generator_TableClassName="InvoicesDataTable" msprop:Generator_TableVarName="tableInvoices" msprop:Generator_TablePropName="Invoices" msprop:Generator_RowDeletingName="InvoicesRowDeleting" msprop:Generator_RowChangingName="InvoicesRowChanging" msprop:Generator_RowEvHandlerName="InvoicesRowChangeEventHandler" msprop:Generator_RowDeletedName="InvoicesRowDeleted" msprop:Generator_UserTableName="Invoices" msprop:Generator_RowChangedName="InvoicesRowChanged" msprop:Generator_RowEvArgName="InvoicesRowChangeEvent" msprop:Generator_RowClassName="InvoicesRow">
+        <xs:element name="Invoices" msprop:Generator_TableClassName="InvoicesDataTable" msprop:Generator_TableVarName="tableInvoices" msprop:Generator_RowChangedName="InvoicesRowChanged" msprop:Generator_TablePropName="Invoices" msprop:Generator_RowDeletingName="InvoicesRowDeleting" msprop:Generator_RowChangingName="InvoicesRowChanging" msprop:Generator_RowEvHandlerName="InvoicesRowChangeEventHandler" msprop:Generator_RowDeletedName="InvoicesRowDeleted" msprop:Generator_RowClassName="InvoicesRow" msprop:Generator_UserTableName="Invoices" msprop:Generator_RowEvArgName="InvoicesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -465,7 +481,7 @@ WHERE        (Id = @id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Parts" msprop:Generator_TableClassName="PartsDataTable" msprop:Generator_TableVarName="tableParts" msprop:Generator_TablePropName="Parts" msprop:Generator_RowDeletingName="PartsRowDeleting" msprop:Generator_RowChangingName="PartsRowChanging" msprop:Generator_RowEvHandlerName="PartsRowChangeEventHandler" msprop:Generator_RowDeletedName="PartsRowDeleted" msprop:Generator_UserTableName="Parts" msprop:Generator_RowChangedName="PartsRowChanged" msprop:Generator_RowEvArgName="PartsRowChangeEvent" msprop:Generator_RowClassName="PartsRow">
+        <xs:element name="Parts" msprop:Generator_TableClassName="PartsDataTable" msprop:Generator_TableVarName="tableParts" msprop:Generator_RowChangedName="PartsRowChanged" msprop:Generator_TablePropName="Parts" msprop:Generator_RowDeletingName="PartsRowDeleting" msprop:Generator_RowChangingName="PartsRowChanging" msprop:Generator_RowEvHandlerName="PartsRowChangeEventHandler" msprop:Generator_RowDeletedName="PartsRowDeleted" msprop:Generator_RowClassName="PartsRow" msprop:Generator_UserTableName="Parts" msprop:Generator_RowEvArgName="PartsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -508,7 +524,7 @@ WHERE        (Id = @id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Vehicles" msprop:Generator_TableClassName="VehiclesDataTable" msprop:Generator_TableVarName="tableVehicles" msprop:Generator_TablePropName="Vehicles" msprop:Generator_RowDeletingName="VehiclesRowDeleting" msprop:Generator_RowChangingName="VehiclesRowChanging" msprop:Generator_RowEvHandlerName="VehiclesRowChangeEventHandler" msprop:Generator_RowDeletedName="VehiclesRowDeleted" msprop:Generator_UserTableName="Vehicles" msprop:Generator_RowChangedName="VehiclesRowChanged" msprop:Generator_RowEvArgName="VehiclesRowChangeEvent" msprop:Generator_RowClassName="VehiclesRow">
+        <xs:element name="Vehicles" msprop:Generator_TableClassName="VehiclesDataTable" msprop:Generator_TableVarName="tableVehicles" msprop:Generator_RowChangedName="VehiclesRowChanged" msprop:Generator_TablePropName="Vehicles" msprop:Generator_RowDeletingName="VehiclesRowDeleting" msprop:Generator_RowChangingName="VehiclesRowChanging" msprop:Generator_RowEvHandlerName="VehiclesRowChangeEventHandler" msprop:Generator_RowDeletedName="VehiclesRowDeleted" msprop:Generator_RowClassName="VehiclesRow" msprop:Generator_UserTableName="Vehicles" msprop:Generator_RowEvArgName="VehiclesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
