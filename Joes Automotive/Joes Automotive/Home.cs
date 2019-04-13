@@ -48,7 +48,10 @@ namespace Joes_Automotive
 
         private void btnInvoices_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This screen has not been implemented yet.");
+            Invoices invoices = new Invoices();
+            this.Hide();
+            invoices.ShowDialog();
+            this.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

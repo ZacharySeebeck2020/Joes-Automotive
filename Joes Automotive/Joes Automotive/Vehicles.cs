@@ -73,5 +73,56 @@ namespace Joes_Automotive
                 MessageBox.Show("A problem has occured: \n\n\n\n\n\n\n\n" + ex.Message);
             }
         }
+
+        private void selectMake_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (selectMake.Text != "")
+            {
+                txtModel.Enabled = true;
+                btnSearch.Enabled = true;
+            } else
+            {
+                txtModel.Enabled = false;
+                btnSearch.Enabled = false;
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtModel.Text != "")
+            {
+                if (txtYear.Text != "")
+                {
+                    int year;
+                    if (int.TryParse(txtYear.Text, out year)) {
+                        vehiclesTableAdapter.FillSearchedMakeModelYear(this.joesBigBoyDatabaseDataSet.Vehicles, selectMake.Text, txtModel.Text, year.ToString());
+                    } else
+                    {
+                        MessageBox.Show("Please make sure that the year is a solid, positive integer.");
+                    }
+
+
+
+                } else
+                {
+                    vehiclesTableAdapter.FillSearchedMakeModel(this.joesBigBoyDatabaseDataSet.Vehicles, selectMake.Text, txtModel.Text);
+                }
+            } else
+            {
+                vehiclesTableAdapter.FillSearchedMake(this.joesBigBoyDatabaseDataSet.Vehicles, selectMake.Text);
+            }
+        }
+
+        private void txtModel_TextChanged(object sender, EventArgs e)
+        {
+            if (txtModel.Text != "")
+            {
+                txtYear.Enabled = true;
+            }
+            else
+            {
+                txtYear.Enabled = false;
+            }
+        }
     }
 }

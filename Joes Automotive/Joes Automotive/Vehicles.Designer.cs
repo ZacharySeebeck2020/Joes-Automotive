@@ -47,12 +47,12 @@
             this.customersBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnEditVehicle = new System.Windows.Forms.ToolStripButton();
             this.lblMake = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.selectMake = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtModel = new System.Windows.Forms.TextBox();
             this.txtYear = new System.Windows.Forms.TextBox();
             this.lblYear = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.joesBigBoyDatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiclesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiclesDataGridView)).BeginInit();
@@ -101,7 +101,7 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.vehiclesDataGridView.DataSource = this.vehiclesBindingSource;
-            this.vehiclesDataGridView.Location = new System.Drawing.Point(12, 62);
+            this.vehiclesDataGridView.Location = new System.Drawing.Point(12, 65);
             this.vehiclesDataGridView.Name = "vehiclesDataGridView";
             this.vehiclesDataGridView.ReadOnly = true;
             this.vehiclesDataGridView.Size = new System.Drawing.Size(1240, 607);
@@ -231,13 +231,33 @@
             this.lblMake.TabIndex = 11;
             this.lblMake.Text = "Make:";
             // 
-            // comboBox1
+            // selectMake
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(75, 35);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(299, 21);
-            this.comboBox1.TabIndex = 12;
+            this.selectMake.FormattingEnabled = true;
+            this.selectMake.Items.AddRange(new object[] {
+            "Tesla",
+            "Ford",
+            "Chevorlet",
+            "Volkswagen",
+            "Volvo",
+            "Subaru",
+            "Scion",
+            "Saturn",
+            "Saleen",
+            "Rolls-Royce",
+            "Pontiac",
+            "Porche",
+            "Mitsubishi",
+            "Nissan",
+            "Chrysler",
+            "Dodge",
+            "Jeep",
+            "Mini"});
+            this.selectMake.Location = new System.Drawing.Point(75, 35);
+            this.selectMake.Name = "selectMake";
+            this.selectMake.Size = new System.Drawing.Size(299, 21);
+            this.selectMake.TabIndex = 12;
+            this.selectMake.SelectedValueChanged += new System.EventHandler(this.selectMake_SelectedValueChanged);
             // 
             // label1
             // 
@@ -258,6 +278,7 @@
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(299, 20);
             this.txtModel.TabIndex = 14;
+            this.txtModel.TextChanged += new System.EventHandler(this.txtModel_TextChanged);
             // 
             // txtYear
             // 
@@ -279,28 +300,29 @@
             this.lblYear.TabIndex = 15;
             this.lblYear.Text = "Year:";
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(1113, 36);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "&Search";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.Enabled = false;
+            this.btnSearch.Location = new System.Drawing.Point(1113, 36);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(139, 23);
+            this.btnSearch.TabIndex = 13;
+            this.btnSearch.Text = "&Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // Vehicles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtYear);
             this.Controls.Add(this.lblYear);
             this.Controls.Add(this.txtModel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.selectMake);
             this.Controls.Add(this.lblMake);
             this.Controls.Add(this.customersBindingNavigator);
             this.Controls.Add(this.vehiclesDataGridView);
@@ -333,12 +355,12 @@
         private System.Windows.Forms.ToolStripButton customersBindingNavigatorSaveItem;
         private System.Windows.Forms.ToolStripButton toolStripBtnEditVehicle;
         private System.Windows.Forms.Label lblMake;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox selectMake;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.TextBox txtYear;
         private System.Windows.Forms.Label lblYear;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

@@ -220,6 +220,7 @@
             this.btnSearch.TabIndex = 15;
             this.btnSearch.Text = "&Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearchQuery
             // 
@@ -229,6 +230,7 @@
             this.txtSearchQuery.Name = "txtSearchQuery";
             this.txtSearchQuery.Size = new System.Drawing.Size(953, 20);
             this.txtSearchQuery.TabIndex = 14;
+            this.txtSearchQuery.TextChanged += new System.EventHandler(this.txtSearchQuery_TextChanged);
             // 
             // lblSearch
             // 

@@ -90,5 +90,21 @@ namespace Joes_Automotive
                 MessageBox.Show("A problem has occured: \n\n\n\n\n\n\n\n" + ex.Message);
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            partsTableAdapter.FillSearchedPart(this.joesBigBoyDatabaseDataSet.Parts, txtSearchQuery.Text);
+        }
+
+        private void txtSearchQuery_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearchQuery.Text == "")
+            {
+                partsTableAdapter.Fill(this.joesBigBoyDatabaseDataSet.Parts);
+            } else
+            {
+                partsTableAdapter.FillSearchedPart(this.joesBigBoyDatabaseDataSet.Parts, txtSearchQuery.Text);
+            }
+        }
     }
 }

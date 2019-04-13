@@ -102,3 +102,7 @@ C:\Users\Zachary Seebeck\Documents\Gitkraken\Joes-Automotive\Joes Automotive\Joe
 C:\Users\Zachary Seebeck\Documents\Git\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.Parts.resources
 C:\Users\Zachary Seebeck\Documents\Git\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.PartEdit.resources
 C:\Users\Zachary Seebeck\Documents\Git\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.PartCreate.resources
+C:\Users\Zachary Seebeck\Documents\Gitkraken\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.PartCreate.resources
+C:\Users\Zachary Seebeck\Documents\Gitkraken\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.PartEdit.resources
+C:\Users\Zachary Seebeck\Documents\Gitkraken\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.Parts.resources
+C:\Users\Zachary Seebeck\Documents\Gitkraken\Joes-Automotive\Joes Automotive\Joes Automotive\obj\Debug\Joes_Automotive.Invoices.resources
